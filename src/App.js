@@ -5,7 +5,8 @@ import "./sass/main.scss";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Loader from "./components/Loader";
-import { motion, AnimatePresence, LayoutGroup, AnimateSharedLayout } from "framer-motion";
+import About from "./components/About";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
               </motion.div>
             )}
             </LayoutGroup>
+            <About/>
           </>
         )}
       </AnimatePresence>
