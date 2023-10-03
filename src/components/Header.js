@@ -8,14 +8,23 @@ const Header = () => {
     animate={{ opacity: 1, y: 0}}
     transition={{
       ease: 'easeInOut',
-      duration: 1,
-      delay: 0.6,
+      duration: 2,
+      delay: 0.8,
     }}>
       <div className="header-inner">
-        <div className="logo">Ollie</div>
+        <div className="logo">
+          <a href="https://www.petfinder.com" target="_blank" >
+            <motion.img src={process.env.PUBLIC_URL + `favicon.png`} 
+            style={{
+            width: '50px', // Set the desired width
+            height: '50px', // Set the desired height
+            alt: "YWH"
+            }}/> 
+          </a>
+        </div>
         <nav className="nav">
           <li>
-            <a href="/">Home</a>
+            <a href="/" >Home</a>
           </li>
           <li>
             <a href="/about">About</a>
@@ -28,7 +37,8 @@ const Header = () => {
           </li>
         </nav>
         <div className="contact">
-          <a href="/contact">Let's work together!</a>
+          <a href="/contact">Let's work together </a>
+          <strong>♡ </strong>
         </div>
         <div className="hamburger-menu">
           <span></span>

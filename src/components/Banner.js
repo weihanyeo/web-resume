@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const banner = {
   animate: { transition: {
-    delayChildren: 0.6,
-    staggerChildren: 0.2,
+    delayChildren: 0.2,
+    staggerChildren: 0.1,
   }}
 }
 
@@ -21,9 +21,10 @@ const letterAnimate = {
   },
 };
 
-const words = ['Animal-lover', 'Outgoing', 'What is going on'];
+const words = ['Animal-lover', 'WebDesigner', 'ProblemSolver', 'Nature Enthusiast', 'Film-Buff', 'Tech-Geek'];
 
 const Banner = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [playMarquee, setPlayMarquee] = useState(false);
 
   useEffect(() => {
@@ -32,14 +33,21 @@ const Banner = () => {
     }, 2000);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) =>
+        prevIndex === words.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change word every 4 seconds
 
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
 
   return (
-    <motion.div className="banner"
-      variants={banner}>
+    <motion.div className="banner" variants={banner}>
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
-      <BannerRowCenter title={"experience"} playMarquee={playMarquee} />
-      <BannerRowBottom title="Software&nbsp;&nbsp;Engineer" />
+      <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} />
+      <BannerRowBottom title="Software&nbsp;&nbsp;Developer" />
     </motion.div>
   );
 };
@@ -115,11 +123,11 @@ const BannerRowBottom = ({ title }) => {
 const BannerRowCenter = ({ title, playMarquee }) => {
   return (
     <div className={`banner-row marquee  ${playMarquee && "animate"}`}>
-      <div className="marquee__inner">{/* 
-        <AnimatedLetters title={title} disabled/> */}
-        <AnimatedLetters title={title} />{/* 
+      <div className="marquee__inner">
+        <AnimatedLetters title={title} disabled/> 
+        <AnimatedLetters title={title} />
         <AnimatedLetters title={title} disabled/>
-        <AnimatedLetters title={title} disabled/> */}
+        <AnimatedLetters title={title} disabled/>
       </div>
     </div>
   );
