@@ -1,0 +1,42 @@
+import React from "react";
+import { motion } from "framer-motion"
+
+const Header = () => {
+  return (
+    <motion.div className="header"
+    initial={{ opacity: 0, y: -180 }}
+    animate={{ opacity: 1, y: 0}}
+    transition={{
+      ease: 'easeInOut',
+      duration: 1,
+      delay: 0.6,
+    }}>
+      <div className="header-inner">
+        <div className="logo">Ollie</div>
+        <nav className="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/work">Work</a>
+          </li>
+          <li>
+            <a href="/skill">Skills</a>
+          </li>
+        </nav>
+        <div className="contact">
+          <a href="/contact">Let's work together!</a>
+        </div>
+        <div className="hamburger-menu">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default Header;
