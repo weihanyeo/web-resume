@@ -31,9 +31,11 @@
       white-space: nowrap;
       @media (max-width: $layout-breakpoint-medium) {
         font-size: 10rem;
+        letter-spacing: -0.6rem;
       }
       @media (max-width: $layout-breakpoint-xsmall) {
         font-size: 6rem;
+        letter-spacing: -0.4rem;
       }
     }
     .row-col {
