@@ -48,6 +48,18 @@ const Banner = () => {
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
       <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} />
       <BannerRowBottom title="Software&nbsp;&nbsp;Developer" />
+        <motion.span className="about-message">
+          <motion.span>About me</motion.span>.<br/><br/>
+          I am a penultimate student at the National University of Singapore completing my undergraduate 
+          degree in information systems. I am a passionate problem solver with a natural curiosity for knowledge.
+          <br/>
+          My zeal for innovation and eagerness to learn has led me to work on a variety of software development 
+          projects, where I have developed my technical skills and earned significant experience working in a 
+          team atmosphere. I am excited to use my technical talents and creativity to assist organizations in 
+          developing cutting-edge solutions that foster their growth and success. 
+          <br/><br/>
+          Feel free to connect with me or contact me at yeoweihan@u.nus.edu
+        </motion.span>
     </motion.div>
   );
 };
@@ -67,22 +79,25 @@ const AnimatedLetters = ({ title, disabled }) => (
 
 const BannerRowTop = ({ title }) => {
   return (
-    <div className={"banner-row"}>
-      <div className="row-col">
-        <AnimatedLetters title={title} />
+    <div>
+      <div className={"banner-row"}>
+        <div className="row-col">
+          <AnimatedLetters title={title} />
+        </div>
+        <motion.div className="row-col" 
+        initial={{opacity:0, y:80}} 
+        animate={{opacity: 1, y:0}} 
+        transition={{
+          ease: "easeInOut",
+          duration: 1,
+          delay: 0.4,
+        }}>
+          <motion.span className="row-message">
+          I am a passionate problem solver with a natural curiosity for knowledge.
+          </motion.span>
+        </motion.div>
       </div>
-      <motion.div className="row-col" 
-      initial={{opacity:0, y:80}} 
-      animate={{opacity: 1, y:0}}
-      transition={{
-        ease: "easeInOut",
-        duration: 1,
-        delay: 0.4,
-      }}>
-        <motion.span className="row-message">
-        I am a passionate problem solver with a natural curiosity for knowledge.
-        </motion.span>
-      </motion.div>
+
     </div>
   );
 };
@@ -106,16 +121,8 @@ const BannerRowBottom = ({ title }) => {
             ease: [0.6, 0.01, 0.05, 0.95],
             duration: 1,
             delay: 1.8,
-          }}>scroll</motion.span>
-        <motion.span
-          initial={{scale: 0}} 
-          animate={{scale: 1}}
-          transition={{
-            ease: [0.6, 0.01, 0.05, 0.95],
-            duration: 1,
-            delay: 1.8,
-          }}>down</motion.span>
-      </motion.div>
+          }}>scroll <br/>down</motion.span>
+        </motion.div> 
       <AnimatedLetters title={title} />
     </div>
   );

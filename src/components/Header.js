@@ -7,8 +7,8 @@ const Header = () => {
     initial={{ opacity: 0, y: -180 }}
     animate={{ opacity: 1, y: 0}}
     transition={{
-      ease: 'easeInOut',
-      duration: 2,
+      ease: [0.6, 0.01, 0.05, 0.95],
+      duration: 1.2,
       delay: 0.8,
     }}>
       <div className="header-inner">
@@ -37,7 +37,6 @@ const Header = () => {
         </nav>
         <div className="contact">
           <a href="/contact">Let's connect </a>
-          <strong>♡ </strong>
         </div>
         <div className="hamburger-menu">
           <span></span>

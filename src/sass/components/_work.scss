@@ -1,10 +1,10 @@
-.app-project {
+.app__project {
     flex: 1;
     width: 100%;
     flex-direction: column;
 }
 
-.app-profiles {
+.app__profiles {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -12,7 +12,7 @@
     margin-top: 2rem;
 }
 
-.app-profile-item {
+.app__profile-item {
     width: 190px;
     display: flex;
     justify-content: flex-start;
@@ -37,8 +37,8 @@
 }
 
 .head-text {
-    font-size: 0.75rem;
-    font-weight: 50;
+    font-size: 2.75rem;
+    font-weight: 80;
     text-align: center;
     color: var(--black-color);
     text-transform: capitalize;
@@ -48,7 +48,7 @@
     }
 
     @media (max-width: $layout-breakpoint-large) {
-    font-size: 1rem;
+    font-size: 4rem;
     }
 
     @media (max-width: $layout-breakpoint-xsmall) {
@@ -56,7 +56,8 @@
     }
 }
 
-.p-text{
+.p-text {
+    font-size: 0.8rem;
     text-align: left;
     color: var(--gray-color);
     line-height: 1.5;
@@ -68,12 +69,12 @@
 
 .bold-text {
     font-size: 1rem;
-    font-weight: 20;
-    //color: var(--black-color);
+    font-weight: 80;
+    color: var(--black-color);
     text-align: left;
 
     @media (max-width: $layout-breakpoint-large) {
-    font-size: 1rem;
+    font-size: 2rem;
     }
 
     @media (max-width: $layout-breakpoint-xsmall) {

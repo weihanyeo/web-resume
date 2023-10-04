@@ -2,29 +2,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const projects = [
-    { title: 'Web Development', description: 'I am a good web developer.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
-    { title: 'Web Design', description: 'I am a good web developer.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
-    { title: 'UI/UX', description: 'I am a good web developer.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
-    { title: 'Web Animation', description: 'I am a good web developer.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` }
+    { title: 'Tshirt Visualiser', description: 'Front-end t-shirt customisable website', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
+    { title: 'Travel Collab Mobile app', description: 'Design project for a travel app.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
+    { title: 'HangManHTML', description: 'Game developed during Tik-tok coding camp.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
+    { title: 'Patrol Bot', description: 'Autonomous robot + computer vision and voice command to help visitors at a hospital.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` }
 ];
 
 const Project = () => {
     return (
         <>
             <h2 className='head-text'>
-                These are some 
-                <span> Projects </span>
-                <br />
-                I have done
+                Projects
             </h2>
 
-            <div className='app__profiles'>
+            <div className='app-profiles'>
                 {projects.map((project, index) => (
                     <motion.div
-                        whileInView={{ opacity: 1 }}
+                        whileInView={{ opacity: [0, 1] }}
                         whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.5, type: 'tween' }}
-                        className='app__profile-item'
+                        transition={{ duration: 0.8, type: 'tween' }}
+                        className='app-profile-item'
                         key= {project.title + index}
                     >
                         <img src={project.imgUrl} alt={project.title}/>
