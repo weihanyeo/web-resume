@@ -87,12 +87,13 @@ const BannerRowTop = ({ title }) => {
   );
 };
 
+
 const BannerRowBottom = ({ title }) => {
   return (
     <div className={"banner-row center"}>
       <motion.div className="scroll"
       initial={{scale: 0}} 
-      animate={{scale: 1}}
+      animate={{scale: 1}} 
       transition={{
         ease: [0.6, 0.01, 0.05, 0.95],
         duration: 2,
