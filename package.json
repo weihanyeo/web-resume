@@ -1,6 +1,6 @@
 {
   "homepage": "https://yeoweihan123.github.io/web-resume/",
-  "name": "code",
+  "name": "web-resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "./Image";
 
@@ -45,6 +45,8 @@ const itemMain = {
 const Loader = ({ setLoading }) => {
   return (
     <motion.div className="loader">
+      {/* // key is for a component to load in 
+      for load in go to pp.js */}
       <motion.div
         variants={container}
         onAnimationComplete={() => setLoading(false)}
@@ -58,6 +60,9 @@ const Loader = ({ setLoading }) => {
           <motion.img
             layoutId="main-image-1"
             src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+            style={{
+              scale: '60%'
+              }}
           />
         </motion.div>
         <ImageBlock variants={item} id="image-3" />

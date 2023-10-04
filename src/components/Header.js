@@ -14,11 +14,10 @@ const Header = () => {
       <div className="header-inner">
         <div className="logo">
           <a href="https://www.petfinder.com" target="_blank" >
-            <motion.img src={process.env.PUBLIC_URL + `favicon.png`} 
+            <motion.img src={process.env.PUBLIC_URL + `/favicon.png`} 
             style={{
             width: '50px', // Set the desired width
             height: '50px', // Set the desired height
-            alt: "YWH"
             }}/> 
           </a>
         </div>
@@ -37,7 +36,7 @@ const Header = () => {
           </li>
         </nav>
         <div className="contact">
-          <a href="/contact">Let's work together </a>
+          <a href="/contact">Let's connect </a>
           <strong>♡ </strong>
         </div>
         <div className="hamburger-menu">

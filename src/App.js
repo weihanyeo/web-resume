@@ -34,7 +34,10 @@ function App() {
               <motion.div className="transition-image final">
                 <motion.img src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
                 layoutId="main-image-1"
-                transition={{ease: [0.6, 0.01, 0.05, 0.9], duration: 1.6}}/>
+                transition={{ease: [0.6, 0.01, 0.05, 0.9], duration: 1.6}}
+                style={{
+                  width: '850px', // Set the desired width
+                  }}/>
               </motion.div>
             )}
             </LayoutGroup>
