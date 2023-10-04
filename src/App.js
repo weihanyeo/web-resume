@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Loader from "./components/Loader";
 import About from "./components/About";
+import Project from "./components/Project";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             )}
             </LayoutGroup>
             <About/>
+            <Project />
           </>
         )}
       </AnimatePresence>
