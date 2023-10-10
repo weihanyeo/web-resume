@@ -1,0 +1,107 @@
+/* CSS for sectionHeadText */
+.sectionHeadText {
+    margin: 3rem;
+    padding-bottom: 3rem;
+    color: white;
+    font-family: 'Black', sans-serif;
+    font-size: 60px;
+    line-height: 30px;
+}
+
+/* CSS for sectionSubText */
+.sectionSubText {
+    margin: 3rem;
+    color: #777777;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.email-container {
+    margin-top: 10rem; /* You can adjust the margin-top value as needed */
+    margin-left: 20rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* You can adjust the gap value as needed */
+    overflow: hidden;
+    width: 900px; /* Set the desired width */
+    min-width: 900px;
+    max-width: 1200px; /* Optionally, set a maximum width to ensure it doesn't become too wide */
+    height: 600px; /* Set the desired height */
+    margin-bottom: 100px;
+}
+
+@media (max-width: $layout-breakpoint-small) {
+    .email-container {
+        margin-top: 12rem;
+        margin-left: 5rem; 
+        width: 80%; 
+        min-width: 70%;
+        max-width: 100%; 
+        height: 600px; 
+        margin-bottom: 100px;
+    }
+}
+
+.input-box {
+    flex: 0.75;
+    background-color: #000;
+    padding: 8px;
+    border-radius: 20px; /* Adjust the value based on your preference */
+    color: white; /* Text color */
+}
+
+.forms-container {
+    margin-top: 3rem; /* Adjust the value based on your specific spacing requirements */
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adjust the gap between child elements based on your design */
+}
+
+.flex-column {
+display: flex;
+flex-direction: column;
+}
+
+.inner-text {
+    color: white;
+    font-weight: 500; /* Medium font-weight */
+    margin-bottom: 1rem; /* 4 times 0.25rem (default line height) equals 1rem */
+}
+
+.custom-input {
+    background-color: #ffffff; /* Replace 'your-tertiary-color' with your desired tertiary color code */
+    padding-top: 1rem; /* Equivalent to py-4 */
+    padding-bottom: 1rem; /* Equivalent to py-4 */
+    padding-left: 1.5rem; /* Equivalent to px-6 */
+    padding-right: 1.5rem; /* Equivalent to px-6 */
+    color: rgb(163, 155, 155);
+    border-radius: 0.5rem; /* Adjust the border radius as needed */
+    border: none;
+    outline: none;
+    font-weight: 500;
+}
+
+.custom-input::placeholder {
+color: #830A48; /* Replace 'your-secondary-color' with your desired secondary color code for the placeholder text */
+}
+
+.submit-button {
+    background-color: #FAB2EA; /* Replace 'your-tertiary-color' with your desired tertiary color code */
+    padding-top: 0.75rem; /* Equivalent to py-3 */
+    padding-bottom: 0.75rem; /* Equivalent to py-3 */
+    padding-left: 2rem; /* Equivalent to px-8 */
+    padding-right: 2rem; /* Equivalent to px-8 */
+    color: white;
+    font-weight: bold;
+    outline: none;
+    width: fit-content; /* Allows the button to fit its content */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
+    border-radius: 0.5rem; /* Adjust the border radius as needed */
+}
+
+.submit-button:hover {
+background-color: #D0FEF5; /* Replace 'your-hover-color' with your desired hover color code */
+}

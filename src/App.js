@@ -7,6 +7,7 @@ import Banner from "./components/Banner";
 import Loader from "./components/Loader";
 import Project from "./components/Project";
 import Work from "./components/Work";
+import Contact from "./components/Contact";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             </LayoutGroup>
             <Project />
             <Work/>
+            <Contact/>
           </>
         )}
       </AnimatePresence>

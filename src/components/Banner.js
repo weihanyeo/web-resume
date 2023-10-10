@@ -48,18 +48,18 @@ const Banner = () => {
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
       <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} />
       <BannerRowBottom title="Software&nbsp;&nbsp;Developer" />
-        <motion.span className="about-message">
-          <motion.span>About me</motion.span>.<br/><br/>
-          I am a penultimate student at the National University of Singapore completing my undergraduate 
-          degree in information systems. I am a passionate problem solver with a natural curiosity for knowledge.
-          <br/>
-          My zeal for innovation and eagerness to learn has led me to work on a variety of software development 
-          projects, where I have developed my technical skills and earned significant experience working in a 
-          team atmosphere. I am excited to use my technical talents and creativity to assist organizations in 
-          developing cutting-edge solutions that foster their growth and success. 
-          <br/><br/>
-          Feel free to connect with me or contact me at yeoweihan@u.nus.edu
-        </motion.span>
+      <motion.div className="about-message">
+        <motion.span>About me</motion.span>.<br/><br/>
+        I am a penultimate student at the National University of Singapore completing my undergraduate 
+        degree in information systems. I am a passionate problem solver with a natural curiosity for knowledge.
+        <br/>
+        My zeal for innovation and eagerness to learn has led me to work on a variety of software development 
+        projects, where I have developed my technical skills and earned significant experience working in a 
+        team atmosphere. I am excited to use my technical talents and creativity to assist organizations in 
+        developing cutting-edge solutions that foster their growth and success. 
+        <br/><br/>
+        Feel free to connect with me or contact me at yeoweihan@u.nus.edu
+      </motion.div>
     </motion.div>
   );
 };
