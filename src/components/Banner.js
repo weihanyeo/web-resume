@@ -30,7 +30,7 @@ const Banner = () => {
   useEffect(() => {
     setTimeout(() => {
       setPlayMarquee(true);
-    }, 2000);
+    }, 3000);
   }, []);
 
   useEffect(() => {
