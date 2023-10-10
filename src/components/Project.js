@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const projects = [
-    { title: 'Tshirt Visualiser', description: 'Front-end t-shirt customisable website', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
-    { title: 'Travel Collab Mobile app', description: 'Design project for a travel app.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
-    { title: 'HangManHTML', description: 'Game developed during Tik-tok coding camp.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` },
-    { title: 'Patrol Bot', description: 'Autonomous robot + computer vision and voice command to help visitors at a hospital.', imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg` }
+    { title: 'Tshirt Visualiser', description: 'Front-end t-shirt customisable website', imgUrl: `${process.env.PUBLIC_URL}/images/project_4.png` },
+    { title: 'Travel Collab Mobile app', description: 'Design project for a travel app.', imgUrl: `${process.env.PUBLIC_URL}/images/project_3.png` },
+    { title: 'HangManHTML', description: 'Game developed during Tik-tok coding camp.', imgUrl: `${process.env.PUBLIC_URL}/images/project_2.png` },
+    { title: 'Patrol Bot', description: 'Autonomous robot + computer vision and voice command to help visitors at a hospital.', imgUrl: `${process.env.PUBLIC_URL}/images/project_1.png` }
 ];
 
 const Project = () => {

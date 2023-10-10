@@ -21,7 +21,7 @@ const letterAnimate = {
   },
 };
 
-const words = ['Animal-lover', 'WebDesigner', 'ProblemSolver', 'Nature Enthusiast', 'Film-Buff', 'Tech-Geek'];
+const words = ['Nature Enthusiast', 'WebDesigner', 'ProblemSolver', 'Animal-lover', 'Film-Buff', 'Tech-Geek'];
 
 const Banner = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
