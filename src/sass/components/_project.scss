@@ -22,54 +22,62 @@
         @media (max-width: $layout-breakpoint-large) {
         width: 370px;
         margin: 2rem 4rem;
-        img {
-            height: 320px;
-        }
+            img {
+                height: 320px;
+            }
         }
         .bold-text {
             font-size: 1rem;
-            font-weight: 20;
-            //color: var(--black-color);
+            font-weight: 50;
             text-align: left;
         
             @media (max-width: $layout-breakpoint-large) {
-            font-size: 1rem;
+            font-size: 1.25rem;
             }
         
             @media (max-width: $layout-breakpoint-xsmall) {
-            font-size: 0.9rem;
+            font-size: 1.5rem;
             }
         }
         .p-text{
             text-align: left;
-            //color: var(--gray-color);
             line-height: 1.5;
         
             @media (max-width: $layout-breakpoint-large) {
-            font-size: 1.75rem;
+            font-size: 2rem;
             }
         }
     }
 }
 
-.head-text {
-    font-size: 24px;
-    font-weight: 50;
-    text-align: center;
-    color: var(--black-color);
-    text-transform: capitalize;
-
-    span {
-    //color: var(--secondary-color);
+/* .sectionHeadText {
+    margin: 3rem;
+    font-weight: 600;
+    margin-left: 20rem;
+    padding-bottom: 3rem;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    line-height: 30px;
+    @media (max-width: $layout-breakpoint-xsmall) {
+        margin: 2rem;
+        font-weight: 400;
+        margin-left: 2rem;
+        line-height: 2.6rem;
+        line-height: 1em;
     }
-
-    @media (max-width: $layout-breakpoint-large) {
-    font-size: 8rem;
-    font-weight: 500;
-    }
-    @media (max-width: $layout-breakpoint-medium) {
-        font-size: 6rem;
-        margin-top: 20rem;
-        font-weight: 500;
-        }
 }
+.sectionSubText {
+    margin: 3rem;
+    font-weight: 600;
+    margin-left: 20rem;
+    color: #777777;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    @media (max-width: $layout-breakpoint-xsmall) {
+        margin: 2rem;
+        font-size: 8px;
+        font-weight: 400;
+        margin-left: 2rem;
+    }
+} */

@@ -11,9 +11,12 @@ const projects = [
 const Project = () => {
     return (
         <>
-            <h2 className='head-text'>
-                Projects
-            </h2>
+            <motion.div >
+                <p className="sectionSubText">
+                What I have built
+                </p>
+                <h2 className="sectionHeadText">Projects</h2>
+            </motion.div>
 
             <div className='app-profiles'>
                 {projects.map((project, index) => (
@@ -31,7 +34,6 @@ const Project = () => {
                         <p className='p-text' style={{ marginTop: 10 }}>
                             {project.description}
                         </p>
-
                     </motion.div>
                 ))}
             </div>

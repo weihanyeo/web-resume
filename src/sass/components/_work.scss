@@ -11,7 +11,6 @@
         color: white; /* Replace with your actual secondary color */
         font-size: 20px;
     }
-    
     .company-name {
         display: flex;
         justify-content: center;
@@ -24,7 +23,7 @@
             height: 60%;
             object-fit: contain;
         }
-    };
+    }
     .work-name {
         color: white; /* Replace with your actual secondary color */
         font-size: 20px;
@@ -48,20 +47,37 @@
             letter-spacing: 0.05em; 
         }
     }
-};
+}
 
 .sectionHeadText {
     margin: 3rem;
+    font-weight: 600;
+    margin-left: 20rem;
     padding-bottom: 3rem;
     color: rgb(0, 0, 0);
     font-size: 60px;
-    line-height: 30px;
+    line-height: auto;
+    @media (max-width: $layout-breakpoint-small) {
+        margin: 1rem;
+        font-weight: 600;
+        margin-left: 1rem;
+        font-size: 40px;
+    }
 }
 /* CSS for sectionSubText */
 .sectionSubText {
     margin: 3rem;
+    font-weight: 600;
+    margin-left: 20rem;
     color: #777777;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
+    margin-top: 20rem;
+    @media (max-width: $layout-breakpoint-small) {
+        margin: 1rem;
+        margin-top: 20rem;
+        font-weight: 600;
+        margin-left: 1rem;
+    }
 }

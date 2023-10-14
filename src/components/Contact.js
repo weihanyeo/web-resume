@@ -137,7 +137,7 @@ const Contact = () => {
             name="message" 
             value={form.message}
             onChange={handleChange} 
-            placeholder="What's do you want to say?" 
+            placeholder="What do you want to say?" 
             className="custom-input"/>
           </label>
 
