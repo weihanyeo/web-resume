@@ -21,7 +21,14 @@ const letterAnimate = {
   },
 };
 
-const words = ['Nature Enthusiast', 'WebDesigner', 'ProblemSolver', 'Animal-lover', 'Film-Buff', 'Tech-Geek'];
+const words = [
+  "Nature Enthusiast",
+  "Web Designer",
+  "Problem Solver",
+  "Animal lover",
+  "Film Buff",
+  "Tech Geek"
+];
 
 const Banner = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -49,7 +56,7 @@ const Banner = () => {
       <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} />
       <BannerRowBottom title="Software&nbsp;&nbsp;Developer" />
       <motion.div className="about-message">
-        <motion.span>About me</motion.span>.<br/><br/>
+        <motion.div className="aboutHeader">About me</motion.div>.<br/><br/>
         I am a penultimate student at the National University of Singapore completing my undergraduate 
         degree in information systems. I am a passionate problem solver with a natural curiosity for knowledge.
         <br/>

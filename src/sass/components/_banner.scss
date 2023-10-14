@@ -96,40 +96,71 @@
       }
     }
   }
-  .about-message { // short message on the right side bottom
-    font-weight: 50;
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-    text-align: left;
-    position: absolute; 
-    width: 520px;
-    left:1200px; 
-    top:700px;
-    @media (max-width: $layout-breakpoint-small) {
-      font-size: 1.6rem;
-      left:30px; 
-      top:580px;
-      width: 380px;
-    }
-    @media (max-width: $layout-breakpoint-medium) {
-      font-size: 1.6rem;
-      left:930px; 
-      top:650px;
-      width: 380px;
-    } 
-    span { 
-      font-size: 4.8rem;
-      font-weight: 600;
-      margin: 2px 0;
-      @media (max-width: $layout-breakpoint-xsmall) {
-        font-size: 2rem;
-        margin: 5px 0;
-      }
-    }
-  } 
+  
 }
 
 
+.about-message { // short message on the right side bottom
+  font-weight: 50;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  text-align: left;
+  position: absolute; 
+  top:75vh;
+  left:65%; 
+  width: 30%;
+  @media (max-width: $layout-breakpoint-medium) {
+    font-size: 1.6rem;
+    top:55vh;
+    left:70%; 
+    width: 20%;
+  } 
+  @media (max-width: 1360px) {
+    font-size: 1.6rem;
+    top:1250px;
+    left: 10rem; /* 10% of the viewport width */
+    width: 80vw; /* 70% of the viewport width */
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    font-size: 1.6rem;
+    top: 80vh;
+    left:3rem; 
+    width: 70%;
+  }
+  @media (max-width: 750) {
+    font-size: 1.6rem;
+    top: 180vh;
+    left:3rem; 
+    width: 70%;
+  } 
+  @media (max-width: $layout-breakpoint-xsmall) {
+    font-size: 1.6rem;
+    top: 70vh;
+    left:3rem; 
+    width: 70%;
+  } 
+  .aboutHeader {
+    //margin: 3rem;
+    font-weight: 550;
+    //margin-left: 20rem;
+    //padding-bottom: 3rem;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    line-height: auto;
+    text-align: right;
+    @media (max-width: $layout-breakpoint-medium) {
+        text-align: left;
+        margin: 0rem;
+        //margin-left: 10rem;
+        font-size: 40px;
+    }
+    @media (max-width: $layout-breakpoint-small) {
+        margin: 0rem;
+        margin-left: 0rem;
+        font-size: 40px;
+    }
+  }
+}
 
 .transition-image {
   position: absolute;

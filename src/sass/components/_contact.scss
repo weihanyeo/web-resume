@@ -1,6 +1,3 @@
-/* CSS for sectionHeadText */
-
-
 .email-container {
     margin-top: 10rem; /* You can adjust the margin-top value as needed */
     margin-left: 20rem; 
@@ -45,6 +42,16 @@
             color: white;
             font-size: 60px;
             line-height: 30px;
+            @media (max-width: $layout-breakpoint-medium) {
+                margin: 3rem;
+                font-size: 40px;
+            }
+            @media (max-width: $layout-breakpoint-small) {
+                margin: 1rem;
+                margin-left: 3rem;
+                margin-bottom: -1rem;
+                font-size: 40px;
+            }
         }
         /* CSS for sectionSubText */
         .sectionSubText {
@@ -53,6 +60,13 @@
             text-transform: uppercase;
             font-size: 14px;
             letter-spacing: 1px;
+            @media (max-width: $layout-breakpoint-medium) {
+                margin: 3rem;
+            }
+            @media (max-width: $layout-breakpoint-small) {
+                margin: 3rem;
+                margin-bottom: 1rem;
+            }
         }
         .forms-container {
             margin-top: 3rem;

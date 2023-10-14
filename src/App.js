@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./sass/main.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"; */
 
 // Components
 import Header from "./components/Header";
@@ -55,9 +55,10 @@ function App() {
           </motion.div>
         ) : (
           <>
+            <LayoutGroup >
             <Header/>
             <Banner/>
-            <LayoutGroup >
+            
             {!loading && (
               <motion.div className="transition-image final">
                 <motion.img src={process.env.PUBLIC_URL + `/images/image-2.jpg`}

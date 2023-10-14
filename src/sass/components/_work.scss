@@ -57,27 +57,40 @@
     color: rgb(0, 0, 0);
     font-size: 60px;
     line-height: auto;
+    @media (max-width: 1360px) {
+        margin: 3rem;
+        margin-left: 10rem;
+        font-size: 40px;
+    }
     @media (max-width: $layout-breakpoint-small) {
         margin: 1rem;
-        font-weight: 600;
-        margin-left: 1rem;
+        margin-left: 3rem;
         font-size: 40px;
     }
 }
 /* CSS for sectionSubText */
 .sectionSubText {
     margin: 3rem;
+    margin-top: 10rem;
     font-weight: 600;
     margin-left: 20rem;
     color: #777777;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    margin-top: 20rem;
+    @media (max-width: 1360px) {
+        margin: 3rem;
+        margin-top: 40rem;
+        margin-left: 10rem;
+    }
     @media (max-width: $layout-breakpoint-small) {
         margin: 1rem;
         margin-top: 20rem;
-        font-weight: 600;
-        margin-left: 1rem;
+        margin-left: 3rem;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
+        margin: 1rem;
+        margin-top: 30rem;
+        margin-left: 3rem;
     }
 }
