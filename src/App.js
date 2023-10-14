@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "./sass/main.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 // Components
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -12,15 +15,38 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     loading
       ? document.querySelector("body").classList.add("loading")
       : document.querySelector("body").classList.remove("loading");
+  
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [loading]);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0, 
+      behavior: "smooth"
+    });
+  };
+
   return (
-    
+    <motion.div className="app-container">
       <AnimatePresence>
         {loading ? (
           <motion.div key='loader'> 
@@ -49,6 +75,12 @@ function App() {
           </>
         )}
       </AnimatePresence>
+      {showScrollButton && (
+        <button className="scroll-to-top-button" onClick={handleScrollToTop}>
+          Scroll to Top
+        </button>
+      )}
+    </motion.div>
   );
 }
 

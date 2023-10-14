@@ -61,6 +61,12 @@
           border: none;
         }
       }
+      &:hover {
+        a {
+          color: #0095ff; // Change the color when .contact is hovered
+          cursor: pointer; // Change cursor to pointer on hover
+        }
+      }
     }
     .hamburger-menu {
       height: 56px;

@@ -1,13 +1,6 @@
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
-//import * as dotenv from "dotenv";
-//dotenv.config();
-
-/* import { styles } from "../styles" */
-/* import { EarthCanvas } from "./canvas" *//* 
-import { SectionWrapper } from "../hoc"
-import { slideIn } from "../utils/motion" */
 
 const slideIn = (direction, type, delay, duration) => {
   return {
@@ -35,6 +28,14 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  
+  const handleScrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
 
   const [loading, setLoading] = useState(false);
 
@@ -97,7 +98,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="email-container">
+    <motion.div className="email-container">
       <motion.div variants={slideIn('left', "tween", 0.2, 1)}
       className="input-box">
         <p className="sectionSubText">Get in touch</p>
@@ -147,11 +148,7 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      {/* <motion.div variants={slideIn('right', "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] ">
-          <EarthCanvas/>
-      </motion.div> */}
-    </div>
+    </motion.div>
   )
 }
 

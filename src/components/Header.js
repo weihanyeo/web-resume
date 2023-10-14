@@ -2,6 +2,14 @@ import React from "react";
 import { motion } from "framer-motion"
 
 const Header = () => {
+  const handleScrollToBottom = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <motion.div className="header"
     initial={{ opacity: 0, y: -180 }}
@@ -16,8 +24,8 @@ const Header = () => {
           <a href="https://www.petfinder.com" target="_blank" >
             <motion.img src={process.env.PUBLIC_URL + `/favicon.png`} 
             style={{
-            width: '50px', // Set the desired width
-            height: '50px', // Set the desired height
+            width: '50px', // Set the desired width 
+            height: '50px', // Set the desired height 
             }}/> 
           </a>
         </div>
@@ -36,7 +44,7 @@ const Header = () => {
           </li>
         </nav>
         <div className="contact">
-          <a href="/contact">Let's connect </a>
+          <a onClick={handleScrollToBottom}>Get in touch</a>
         </div>
         <div className="hamburger-menu">
           <span></span>

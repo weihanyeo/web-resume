@@ -4,27 +4,12 @@ import { motion } from 'framer-motion'
 
 import 'react-vertical-timeline-component/style.min.css'
 
-const styles = {
-  paddingX: "sm:px-16 px-6",
-  paddingY: "sm:py-16 py-6",
-  padding: "sm:px-16 px-6 sm:py-16 py-10",
-
-  heroHeadText:
-      "font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
-  heroSubText:
-      "text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
-
-  sectionHeadText:
-      "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
-  sectionSubText:
-      "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
-};
 
 const experiences = [
   {
       title: "Cyber Application Security Intern",
       company_name: "Deloitte (Singapore)",
-      imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg`,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
       iconBg: "#383E56",
       date: "May 2023 - Jul 2023",
       points: [
@@ -38,7 +23,7 @@ const experiences = [
   {
       title: "IT Operations Engineer",
       company_name: "Kyndryl (Singapore)",
-      imgUrl: `${process.env.PUBLIC_URL}/favicon.png`,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
       iconBg: "#E6DEDD",
       date: "May 2022 - Aug 2022",
       points: [
@@ -50,7 +35,7 @@ const experiences = [
   {
       title: "IT Assistant",
       company_name: "CPF Board",
-      imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg`,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
       iconBg: "#383E56",
       date: "Jun 2019 - Aug 2019",
       points: [
@@ -62,7 +47,7 @@ const experiences = [
   {
       title: "Customer Service Representative",
       company_name: "CPF Board",
-      imgUrl: `${process.env.PUBLIC_URL}/images/image-5.jpg`,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
       iconBg: "#E6DEDD",
       date: "Mar 2019 - May 2019",
       points: [
@@ -93,32 +78,31 @@ const textVariant = (delay) => {
 
 const WorkCard = ({ experience }) => (
   <VerticalTimelineElement 
-  contentStyle={{background: '#1d1836', color: '#fff'}}
+  contentStyle={{background: '#1d1836', color: '#000'}}
   contentArrowStyle={{ borderRight: '7px solid #232631'}}
   date={experience.date}
   iconStyle={{ background: experience.iconBg }}
   imgUrl={
-    <div className='flex justify-center items-center w-full h-full'>
+    <div className='company-name'>
       <img src={experience.imgUrl} alt={experience.company_name}
-      className='w-[60%] h-[60%] object-contain' />
+      className='logo' />
     </div>
   }>
       <div>
-        <h3 className='text-white text-[24px] font-bold'> 
+        <h3 className='work-title'> 
           {experience.title}
         </h3>
-        <p className='text-secondary text-[16px] font-semibold' style={{margin : 0}}>
+        <p className='work-name' style={{margin : 8}}>
           {experience.company_name}
         </p>
       </div>
 
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
+      <ul className='experience-points'>
         {experience.points.map((point,index) => (
           <li 
           key={'experience-point-$(index)'}
-          className='text-white-100 text-[14px] pl-1 tracking-wider'>
+          className='list'>
             {point}
-
           </li>
         ))}
       </ul>
@@ -129,13 +113,13 @@ const Work = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>
+        <p className="sectionSubText">
           What I have done so far
         </p>
-        <h2 className={styles.sectionHeadText}>Work experiences</h2>
+        <h2 className="sectionHeadText">Work experiences</h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div className='timeline'>
         <VerticalTimeline>
         {experiences.map((experience, index) =>
           <WorkCard key={index} experience={experience}/>
