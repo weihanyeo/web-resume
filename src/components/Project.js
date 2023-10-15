@@ -11,7 +11,7 @@ const projects = [
 const Project = () => {
     return (
         <>
-            <motion.div >
+            <motion.div className='project-head'>
                 <p className="sectionSubText">
                 What I have built
                 </p>

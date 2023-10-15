@@ -103,34 +103,40 @@
 .about-message { // short message on the right side bottom
   font-weight: 50;
   font-size: 1.8rem;
-  line-height: 2.6rem;
+  line-height: 2.4rem;
   text-align: left;
   position: absolute; 
-  top:75vh;
+  top:60vh;
   left:65%; 
-  width: 30%;
+  width:30%;
   @media (max-width: $layout-breakpoint-medium) {
     font-size: 1.6rem;
-    top:55vh;
+    top:45vh;
     left:70%; 
-    width: 20%;
+    width:20%;
   } 
   @media (max-width: 1360px) {
     font-size: 1.6rem;
-    top:1250px;
+    top:120vh;
     left: 10rem; /* 10% of the viewport width */
     width: 80vw; /* 70% of the viewport width */
   }
   @media (max-width: $layout-breakpoint-small) {
     font-size: 1.6rem;
-    top: 80vh;
-    left:3rem; 
+    top: 100vh;
+    left:5rem; 
     width: 70%;
   }
-  @media (max-width: 750) {
+  @media (max-width: 750px) {
     font-size: 1.6rem;
-    top: 180vh;
-    left:3rem; 
+    top: 90vh;
+    left:5rem; 
+    width: 70%;
+  } 
+  @media (max-width: 650px) {
+    font-size: 1.6rem;
+    top: 75vh;
+    left:5rem; 
     width: 70%;
   } 
   @media (max-width: $layout-breakpoint-xsmall) {
