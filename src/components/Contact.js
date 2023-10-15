@@ -1,25 +1,17 @@
-import { useState, useRef } from "react"
+import React, { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
 
-const slideIn = (direction, type, delay, duration) => {
-  return {
-      hidden: {
-          x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-          y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
-      },
-      show: {
-          x: 0,
-          y: 0,
-          transition: {
-              type: type,
-              delay: delay,
-              duration: duration,
-              ease: "easeOut",
-          },
-      },
-  };
-};
+const scaleVariants = {
+  whileInView: {
+      scale: [0.8, 1],
+      opacity: [0, 1],
+      transition: {
+          duration: 0.5, 
+          ease: 'easeInOut'
+      }
+  }
+}
 
 const Contact = () => {
   const formRef = useRef();
@@ -56,7 +48,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: 'Wei Han',
           from_email: form.email,
-          to_email: 'yeowh@hotmail.sg',
+          to_email: 'e0726774@u.nus.edu',
           message: form.message,
         },
         process.env.REACT_APP_EMAILJS_API_KEY
@@ -98,9 +90,13 @@ const Contact = () => {
   }
 
   return (
-    <motion.div className="email-container">
-      <motion.div variants={slideIn('left', "tween", 0.2, 1)}
-      className="input-box">
+    <>
+    <motion.div variant={scaleVariants}
+                whileInView={scaleVariants.whileInView}
+                transition={{ duration: 0.5, type: 'tween' }}
+                        > 
+    <div className="email-container" >
+      <div className="input-box">
         <p className="sectionSubText">Get in touch</p>
         <h3 className="sectionHeadText">Contact.</h3>
         <form ref={formRef} onSubmit={handleSubmit} className="forms-container">
@@ -146,9 +142,10 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
-      </motion.div>
-
+      </div>
+    </div>
     </motion.div>
+    </>
   )
 }
 

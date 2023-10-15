@@ -125,7 +125,6 @@ const Work = () => {
           <WorkCard key={index} experience={experience}/>
         )}
         </VerticalTimeline>
-
       </div>
     </>
   )

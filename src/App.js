@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import "./sass/main.scss";
+import logo from './logo.svg';
 
-/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons"; */
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 // Components
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -69,17 +68,36 @@ function App() {
                   }}/> 
               </motion.div>
             )}
-            </LayoutGroup>
             <Project />
             <Work/>
             <Contact/>
+            </LayoutGroup>
           </>
         )}
       </AnimatePresence>
       {showScrollButton && (
-        <button className="scroll-to-top-button" onClick={handleScrollToTop}>
-          Scroll to Top
-        </button>
+        <div className="buttons">
+          <a href="https://www.figma.com/@yeoweihan" target="_blank" className="social-buttons">
+            <i class="fa-brands fa-figma"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yeo-wei-han/" target="_blank" className="social-buttons">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:yeoweihan@u.nus.edu" className="social-buttons">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://github.com/YeoWeiHan123" target="_blank" className="social-buttons">
+            <i class="fa-brands fa-github"></i>
+          </a>
+      
+          <div className="scroll-to-top-button" onClick={handleScrollToTop}>
+              <div className="scroll">
+                
+                <i class="fa-solid fa-arrow-up"></i>
+                back to top
+              </div>
+          </div>
+        </div>
       )}
     </motion.div>
   );
