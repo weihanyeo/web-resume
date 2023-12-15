@@ -1,6 +1,7 @@
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
+import { company1, company2, company3, company4 } from '../assets'
 
 import 'react-vertical-timeline-component/style.min.css'
 
@@ -9,51 +10,51 @@ const experiences = [
   {
       title: "Cyber Application Security Intern",
       company_name: "Deloitte (Singapore)",
-      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
+      imgUrl: company4,
       iconBg: "#383E56",
       date: "May 2023 - Jul 2023",
       points: [
           "Drafted and tailored engagement proposal letters, demonstrating effective communication and presentation of comprehensive project scopes to a client.",
-          "Prepared over 100 User to Role Matrices using client inputs, ensuring precise mapping of user access and authorizations in complex SAP environments.",
-          "Rationalized SAP Roles based on organizational structures, business processes, and unique business positions, optimizing user access and security within SAP systems for three major clients.",
-          "Demonstrated expertise in implementing SAP Access Control rulesets, including Segregation of Duties (SOD) and Critical Access rules, to enhance risk management and compliance in SAP environments.",
+          "Prepared over 100 User to Role Matrices using client inputs, ensuring precise mapping of user access and authorizations in complex SAP environments and link several organization matrix data into Tableau for visualization.",
+          "Automated the extraction and integration of SAP data into Power BI, improving reporting efficiency and insights.",
+          "Utilized Jira for issue tracking and project management, ensuring efficient coordination and streamlined workflows across teams.",
           
       ],
   },
   {
       title: "IT Operations Engineer",
       company_name: "Kyndryl (Singapore)",
-      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
+      imgUrl: company3,
       iconBg: "#E6DEDD",
       date: "May 2022 - Aug 2022",
       points: [
           "Specialized in providing technical support and maintenance. Deployed, cloned hardware change operations for healthcare technology solutions for thousands of devices.",
-          "Delivered high-quality technical and operational support to healthcare providers, contributing to efficient operation of IT information systems for thousands of monthly visitors.",
-          "Provided level 1 and 2 troubleshooting and problem resolution services to healthcare institutions, including the National Skin Centre and National Neuroscience Institute.",
+          "Utilized CRON to automate routine tasks, enhancing operational efficiency in managing healthcare technology solutions. Which includes scheduling regular maintenance activities and system checks.",
+          "Applied an in-depth understanding of TCP/IP networking fundamentals and expertise in internet service architectures (load balancing, CDNs), enhancing the efficiency and resilience of healthcare technology solutions.",
       ],
   },
   {
       title: "IT Assistant",
-      company_name: "CPF Board",
-      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
+      company_name: "Central Provident Fund Board (Singapore)",
+      imgUrl: company2,
       iconBg: "#383E56",
       date: "Jun 2019 - Aug 2019",
       points: [
-          "Collaborated cross-functionally to curate and integrate hundreds of new variables into the organization's data dictionary, strategically paved the way for future policy implementations.",
-          "Cultivated professional relationships with clients, adeptly discussed the nature of variables and guiding their optimal utilization within the data context.",
-          "Demonstrated utmost discretion and responsibility in the secure handling and safeguarding of classified information, adhering to the highest standards of confidentiality.",
+          "Collaborated cross-functionally to curate and integrate hundreds of new variables into the organization's data dictionary, strategically paved way for future policy implementations.",
+          "Cultivated professional relationships with 10+ clients, adeptly discussed the nature of variables and guiding optimal utilization within the data compliance context.",
+          "Displayed utmost discretion and responsibility in the secure handling and safeguarding of classified information, adhering to the highest standards of confidentiality.",
       ],
   },
   {
-      title: "Customer Service Representative",
-      company_name: "CPF Board",
-      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
+      title: "Software Engineer",
+      company_name: "Ngee Ann Polytechnic (Singapore)",
+      imgUrl: company1,
       iconBg: "#E6DEDD",
       date: "Mar 2019 - May 2019",
       points: [
-          "Promoted and represented the interests of CPF Board, contributing to the successful operation, transactions, and overall business development of the organization.",
-          "Specialized in delivering personalized assistance to CPF members, guiding them through various schemes, and helping them make informed decisions about their financial future.",
-          " Provided prompt and accurate responses to customer queries, ensuring that each interaction reflects the highest standards of professionalism and courtesy.",
+          "Team lead for the development of an autonomous concierge cum security robot in collaboration with Tan Tock Seng Hospital for my final year project.",
+          "The robot, activated by voice command, navigates predefined points, enhancing security and directional guidance within the hospital",
+          "Contributed to creating new messages in packages, utilizing CMakeList.txt. Project achievements include improved hospital security, streamlined visitor guidance for 1000+ weekly visitors, and potential applications in various settings.",
       ],
   },
 ];
@@ -78,7 +79,8 @@ const textVariant = (delay) => {
 
 const WorkCard = ({ experience }) => (
   <VerticalTimelineElement 
-  contentStyle={{background: '#1d1836', color: '#000'}}
+  className='custom-timeline-element'
+  contentStyle={{background: '#1d1836', borderRadius: '24px'}}
   contentArrowStyle={{ borderRight: '7px solid #232631'}}
   date={experience.date}
   iconStyle={{ background: experience.iconBg }}
@@ -100,7 +102,7 @@ const WorkCard = ({ experience }) => (
       <ul className='experience-points'>
         {experience.points.map((point,index) => (
           <li 
-          key={'experience-point-$(index)'}
+          key={`experience-point-${index}`}
           className='list'>
             {point}
           </li>
