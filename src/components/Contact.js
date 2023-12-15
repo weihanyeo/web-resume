@@ -39,55 +39,35 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    
-      // Sending email to recipient
-      emailjs.send(
-        process.env.REACT_APP_SERVICE_LINK,
-        process.env.REACT_APP_TEMPLATE_LINK,
-        {
-          from_name: form.name,
-          to_name: 'Wei Han',
-          from_email: form.email,
-          to_email: 'e0726774@u.nus.edu',
-          message: form.message,
-        },
-        process.env.REACT_APP_EMAILJS_API_KEY
+
+    emailjs.send(
+      process.env.REACT_APP_SERVICE_LINK,
+      process.env.REACT_APP_TEMPLATE_LINK,
+      {
+        from_name: form.name,
+        to_name: 'Wei Han',
+        from_email: form.email,
+        to_email: 'yeoweihan@u.nus.edu',
+        message: form.message,
+      },
+      process.env.REACT_APP_EMAILJS_API_KEY 
       )
       .then(() => {
-        // Sending copy of email to the user
-        emailjs.send(
-          process.env.REACT_APP_SERVICE_LINK,
-          process.env.REACT_APP_TEMPLATE_LINK, 
-          {
-            from_name: 'Yeo Wei Han', // Your name or your company's name
-            to_name: form.name,
-            from_email: 'form.email', // Your email address hmm
-            to_email: form.email,
-            message: 'Copy of the message you sent: ' + form.message,
-          },
-          process.env.REACT_APP_EMAILJS_API_KEY // Use the template key for the new template
-        )
-        .then(() => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
-
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
-        }, (error) => {
-          setLoading(false);
-          console.log(error);
-          alert('Something went wrong sending a copy to your email. Please try again!');
-        });
-      })
-      .catch((error) => {
         setLoading(false);
+        alert('Thank you. I will get back to you as soon as possible.');
+
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }, (error) => {
+        setLoading(false)
         console.log(error);
-        alert('Something went wrong. Please try again!');
-      });
+        alert('Something went wrong. Please try again!')
+      })
   }
+
 
   return (
     <>
