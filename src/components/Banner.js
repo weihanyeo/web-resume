@@ -51,10 +51,10 @@ const Banner = () => {
   }, []);
 
   return (
-    <motion.div className="banner" variants={banner}>
+    <motion.div id="Home" className="banner" variants={banner}>
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
       {/* <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} /> */}
-      <BannerRowBottom title="Software&nbsp;&nbsp;Developer" />
+      <BannerRowBottom title="Software&nbsp;Developer" />
       <motion.div className="about-message">
         <motion.div className="aboutHeader">About me</motion.div>.<br/><br/>
         I am a penultimate student at the National University of Singapore completing my undergraduate 
@@ -119,7 +119,7 @@ const BannerRowBottom = ({ title }) => {
       transition={{
         ease: [0.6, 0.01, 0.05, 0.95],
         duration: 2,
-        delay: 5,
+        delay: 3,
       }}>
         <motion.span
           initial={{scale: 0}} 

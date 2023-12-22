@@ -115,7 +115,7 @@ const WorkCard = ({ experience }) => (
 const Work = () => {
   return (
     <>
-      <motion.div className="work-head" variants={textVariant()}>
+      <motion.div id="Work" className="work-head" variants={textVariant()}>
         <p className="sectionSubText">
           What I have done so far
         </p>

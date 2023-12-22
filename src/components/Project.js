@@ -11,7 +11,7 @@ const projects = [
 const Project = () => {
     return (
         <>
-            <motion.div className='project-head'>
+            <motion.div id="Project" className='project-head'>
                 <p className="sectionSubText">
                 What I have built
                 </p>

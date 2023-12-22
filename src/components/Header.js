@@ -29,20 +29,15 @@ const Header = () => {
             }}/> 
           </a>
         </div>
-        <nav className="nav">
-          <li>
-            <a href="/" >Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/work">Work</a>
-          </li>
-          <li>
-            <a href="/skill">Skills</a>
-          </li>
-        </nav>
+        <ul className='nav'>
+                {['Home', 'Project', 'Work']
+                .map((item) => (
+                    <li className='app__flex' key={`${item}`}>
+                        <div/>
+                        <a href={`#${item}`}>{item}</a>
+                    </li>
+                ))}
+            </ul>
         <div className="contact">
           <a onClick={handleScrollToBottom}>Get in touch</a>
         </div>

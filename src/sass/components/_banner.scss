@@ -75,9 +75,10 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      left: 160px;
+      left: 80%;
+      top: 270px;
       @media (max-width: $layout-breakpoint-medium) {
-        left: 60px;
+        left: 70%;
       }
       @media (max-width: 1240px) {
         display: none;
@@ -98,7 +99,6 @@
   }
   
 }
-
 
 .about-message { // short message on the right side bottom
   font-weight: 50;

@@ -40,10 +40,29 @@
       li {
         list-style: none;
         margin: 0 40px;
+        padding: 5px;
+        div { /* top dots */
+          width: 7px;
+          height: 7px;
+          background: transparent;
+          border-radius: 50%;
+          align-self: center; 
+          margin: 0 auto; 
+          margin-bottom: 5px;
+          transition: all 0.3s ease-in-out;
+        }
         a {
           text-decoration: none;
           color: $black;
           white-space: nowrap;
+        }&:hover {
+          a {
+            color: #830A48;
+            cursor: pointer;
+          }
+          div {
+            background: #830A48;
+          }
         }
       }
     }
@@ -63,7 +82,7 @@
       }
       &:hover {
         a {
-          color: #0095ff; // Change the color when .contact is hovered
+          color: #830A48; // Change the color when .contact is hovered
           cursor: pointer; // Change cursor to pointer on hover
         }
       }
