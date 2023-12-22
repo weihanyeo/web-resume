@@ -1,7 +1,6 @@
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
-import { company1, company2, company3, company4 } from '../assets'
 
 import 'react-vertical-timeline-component/style.min.css'
 
@@ -10,7 +9,7 @@ const experiences = [
   {
       title: "Cyber Application Security Intern",
       company_name: "Deloitte (Singapore)",
-      imgUrl: company4,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company4.png`,
       iconBg: "#383E56",
       date: "May 2023 - Jul 2023",
       points: [
@@ -24,7 +23,7 @@ const experiences = [
   {
       title: "IT Operations Engineer",
       company_name: "Kyndryl (Singapore)",
-      imgUrl: company3,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company3.png`,
       iconBg: "#E6DEDD",
       date: "May 2022 - Aug 2022",
       points: [
@@ -36,7 +35,7 @@ const experiences = [
   {
       title: "IT Assistant",
       company_name: "Central Provident Fund Board (Singapore)",
-      imgUrl: company2,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
       iconBg: "#383E56",
       date: "Jun 2019 - Aug 2019",
       points: [
@@ -48,7 +47,7 @@ const experiences = [
   {
       title: "Software Engineer",
       company_name: "Ngee Ann Polytechnic (Singapore)",
-      imgUrl: company1,
+      imgUrl: `${process.env.PUBLIC_URL}/images/company1.png`,
       iconBg: "#E6DEDD",
       date: "Mar 2019 - May 2019",
       points: [
@@ -83,11 +82,13 @@ const WorkCard = ({ experience }) => (
   contentStyle={{background: '#1d1836', borderRadius: '24px'}}
   contentArrowStyle={{ borderRight: '7px solid #232631'}}
   date={experience.date}
-  iconStyle={{ background: experience.iconBg }}
-  imgUrl={
-    <div className='company-name'>
+  dateClassName='custom-date-class'
+  iconStyle={{ background: experience.iconBg, width: '100px', height: '100px', marginLeft: '-50px' }}
+  icon={
+    <div className='company-name'  >
       <img src={experience.imgUrl} alt={experience.company_name}
-      className='logo' />
+      className='logo'
+      />
     </div>
   }>
       <div>

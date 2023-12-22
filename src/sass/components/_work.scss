@@ -1,15 +1,25 @@
 .custom-timeline-element {
-    color: #111;
+    //color: #111; // for the date text
     font-size: 20px;
     
+}
+
+.custom-date-class {
+    
+    margin: 20px; 
     @media (max-width: 1170px) { // this is for the date.
         color: #fff; // Set the text color to white for small screens
+        padding-left: 30px;
+        transform: scale(1.75);
+        transform-origin: 0 0;
     }
 }
+
 .timeline {
     margin-top: 5rem; 
     display: flex;
     flex-direction: column;
+    padding: 20px;
     .work-title {
         color: rgb(167, 8, 114);
         font-size: 24px;
@@ -31,11 +41,6 @@
             object-fit: contain;
         }
     }
-    .work-name {
-        color: white; /* Replace with your actual secondary color */
-        font-size: 20px;
-    }
-
     .experience-points{
         margin-top: 1.25rem; 
         list-style-type: disc;
@@ -91,7 +96,7 @@
         font-size: 14px;
         letter-spacing: 1px;
         @media (max-width: 1360px) {
-            margin: 8rem;
+            margin: 1rem;
             margin-left: 10rem;
         }
         @media (max-width: $layout-breakpoint-small) {
