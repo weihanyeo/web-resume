@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const handleScrollToBottom = (e) => {
@@ -30,14 +31,24 @@ const Header = () => {
           </a>
         </div>
         <ul className='nav'>
-                {['Home', 'Work', 'Project']
-                .map((item) => (
-                    <li className='app__flex' key={`${item}`}>
-                        <div/>
-                        <a href={`#${item}`}>{item}</a>
-                    </li>
-                ))}
-            </ul>
+          {['Home', 'Work', 'Project'].map((item) => (
+            <li className='app__flex' key={`${item}`}>
+              <div />
+              <Link
+                activeClass="active"
+                to={item} // Assuming your sections have ids matching their names
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust this value to offset the scroll position if you have a fixed header
+                duration={800} // Scroll duration in milliseconds
+                // Custom easing function
+                ease="cubic-bezier(0.645, 0.045, 0.355, 1)" // Example of a custom ease function
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
         <div className="contact">
           <a onClick={handleScrollToBottom}>Get in touch</a>
         </div>

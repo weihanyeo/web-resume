@@ -54,7 +54,7 @@
             height: 100px;
             width: 100px;
             border-radius: 30%;
-            position: absolute;
+            position: fixed;
             background: #FAB2EA;
             padding: 20px;
             align-items: center;
@@ -62,18 +62,15 @@
             justify-content: center;
             flex-direction: column;
             left: 90%;
-            margin-bottom: 100px;
+            bottom: 20px;
             &:hover {
-                  color: #830A48;
-                  cursor: pointer;
+              color: #830A48;
+              cursor: pointer;
             }
             .fa-solid {
-                font-size: 20px; // Adjust the icon size if necessary
+              font-size: 20px; // Adjust the icon size if necessary
             }
-            @media (max-width: $layout-breakpoint-medium) {
-                left: 60px;  
-            }
-            @media (max-width: 1240px) {
+            @media (max-width: $layout-breakpoint-small) {
                 display: none;
                 font-size: 10px;
                 margin: 2px 0;
