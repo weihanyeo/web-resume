@@ -1,0 +1,160 @@
+.about-head{
+    .sectionHeadText {
+        @media (max-width: $layout-breakpoint-large) {
+            top: 30%;
+            margin: 3rem;
+            font-weight: 600;
+            margin-left: 20rem;
+            color: rgb(0, 0, 0);
+            font-size: 60px;
+            
+            text-align: left;
+            position: absolute; 
+            margin: 3rem;
+            margin-left: 20rem;
+            line-height: 2.4rem;
+            color: #111;
+            top:100vh;
+            left:55%; 
+            width:30%;
+        }
+        /* @media (max-width: $layout-breakpoint-large) {
+            padding: 30px;
+            font-weight: 50;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            text-align: left;
+            position: absolute; 
+            top:100vh;
+            left:55%; 
+            width:30%;
+        } */
+        @media (max-width: 1360px) {
+            margin: 1rem;
+            margin-left: 10rem;
+            font-size: 40px;
+            margin-left: 10rem;
+            position: static; 
+            width:80%;
+        }
+        @media (max-width: $layout-breakpoint-small) {
+            margin: 1rem;
+            margin-left: 5rem;
+            font-size: 40px;
+        }
+        @media (max-width: $layout-breakpoint-xsmall) {
+            margin: 1rem;
+            margin-left: 3rem;
+            font-size: 40px;
+        }
+    }
+    /* CSS for sectionSubText */
+    .sectionSubText {
+        @media (max-width: $layout-breakpoint-large) {
+            text-align: left;
+            position: absolute; 
+            margin: 3rem;
+            font-weight: 600;
+            margin-left: 20rem;
+            line-height: 2.4rem;
+            color: #777777;
+            font-size: 14px;
+            letter-spacing: 1px;
+            top:115vh;
+            left:55%; 
+            width:30%;
+        }
+        @media (max-width: 1360px) {
+            margin: 1rem;
+            margin-left: 10rem;
+            position: static; 
+            width:80%;
+        }
+        @media (max-width: $layout-breakpoint-small) {
+            margin: 1rem;
+            margin-top: 5rem;
+            margin-left: 5rem;
+            position: static; 
+            width:80%;
+        }
+        @media (max-width: $layout-breakpoint-xsmall) {
+            margin: 1rem;
+            margin-top: 5rem;
+            margin-left: 3rem;
+            position: static; 
+            width:80%;
+        }
+    }
+}
+
+
+/* 
+.about-message { // short message on the right side bottom
+    padding: 30px;
+    font-weight: 50;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: left;
+    position: absolute; 
+    top:100vh;
+    left:55%; 
+    width:30%;
+    @media (max-width: $layout-breakpoint-medium) {
+      font-size: 1.6rem;
+      top:95vh;
+      left:70%; 
+      width:20%;
+    } 
+    @media (max-width: 1360px) {
+      font-size: 1.6rem;
+      top:120vh;
+      left: 10rem;
+      width: 80vw; 
+    }
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 1.6rem;
+      top: 100vh;
+      left:5rem; 
+      width: 70%;
+    }
+    @media (max-width: 750px) {
+      font-size: 1.6rem;
+      top: 90vh;
+      left:5rem; 
+      width: 70%;
+    } 
+    @media (max-width: 650px) {
+      font-size: 1.6rem;
+      top: 75vh;
+      left:5rem; 
+      width: 70%;
+    } 
+    @media (max-width: $layout-breakpoint-xsmall) {
+      font-size: 1.6rem;
+      top: 70vh;
+      left:3rem; 
+      width: 70%;
+    } 
+    .aboutHeader {
+      //margin: 3rem;
+      font-weight: 550;
+      //margin-left: 20rem;
+      //padding-bottom: 3rem;
+      color: rgb(0, 0, 0);
+      font-size: 60px;
+      line-height: auto;
+      text-align: left;
+      @media (max-width: $layout-breakpoint-medium) {
+          text-align: left;
+          margin: 0rem;
+          //margin-left: 10rem;
+          font-size: 40px;
+      }
+      @media (max-width: $layout-breakpoint-small) {
+          margin: 0rem;
+          margin-left: 0rem;
+          font-size: 40px;
+      }
+    }
+  }
+   */

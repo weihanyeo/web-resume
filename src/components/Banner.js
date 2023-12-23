@@ -21,14 +21,14 @@ const letterAnimate = {
   },
 };
 
-const words = [
+/* const words = [
   "Nature Enthusiast",
   "Web Designer",
   "Problem Solver",
   "Animal lover",
   "Film Buff",
   "Tech Geek"
-];
+]; */
 
 const Banner = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -40,7 +40,7 @@ const Banner = () => {
     }, 3000);
   }, []);
 
-  useEffect(() => {
+/*   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) =>
         prevIndex === words.length - 1 ? 0 : prevIndex + 1
@@ -48,25 +48,13 @@ const Banner = () => {
     }, 4000); // Change word every 4 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+  }, []); */
 
   return (
     <motion.div className="banner" variants={banner}>
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
       {/* <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} /> */}
       <BannerRowBottom title="Software&nbsp;Developer" />
-      <motion.div className="about-message">
-        <motion.div className="aboutHeader">About me</motion.div>.<br/><br/>
-        I am a penultimate student at the National University of Singapore completing my undergraduate 
-        degree in information systems. I am a passionate problem solver with a natural curiosity for knowledge.
-        <br/>
-        My zeal for innovation and eagerness to learn has led me to work on a variety of software development 
-        projects, where I have developed my technical skills and earned significant experience working in a 
-        team atmosphere. I am excited to use my technical talents and creativity to assist organizations in 
-        developing cutting-edge solutions that foster their growth and success. 
-        <br/><br/>
-        Feel free to connect with me or contact me at yeoweihan@u.nus.edu
-      </motion.div>
     </motion.div>
   );
 };
@@ -104,7 +92,7 @@ const BannerRowTop = ({ title }) => {
           </motion.span>
         </motion.div>
       </div>
-
+      
     </div>
   );
 };
@@ -134,7 +122,7 @@ const BannerRowBottom = ({ title }) => {
     </div>
   );
 };
-
+/* 
 const BannerRowCenter = ({ title, playMarquee }) => {
   return (
     <div className={`banner-row marquee  ${playMarquee && "animate"}`}>
@@ -146,6 +134,6 @@ const BannerRowCenter = ({ title, playMarquee }) => {
       </div>
     </div>
   );
-};
+}; */
 
 export default Banner;

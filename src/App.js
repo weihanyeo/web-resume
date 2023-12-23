@@ -11,6 +11,7 @@ import Project from "./components/Project";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import About from "./components/About";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
                   }}/> 
               </motion.div>
             )}
-            
+            <About />
             <Work/>
             <Project />
             <Contact/>

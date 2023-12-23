@@ -100,74 +100,6 @@
   
 }
 
-.about-message { // short message on the right side bottom
-  font-weight: 50;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  text-align: left;
-  position: absolute; 
-  top:60vh;
-  left:65%; 
-  width:30%;
-  @media (max-width: $layout-breakpoint-medium) {
-    font-size: 1.6rem;
-    top:45vh;
-    left:70%; 
-    width:20%;
-  } 
-  @media (max-width: 1360px) {
-    font-size: 1.6rem;
-    top:120vh;
-    left: 10rem; /* 10% of the viewport width */
-    width: 80vw; /* 70% of the viewport width */
-  }
-  @media (max-width: $layout-breakpoint-small) {
-    font-size: 1.6rem;
-    top: 100vh;
-    left:5rem; 
-    width: 70%;
-  }
-  @media (max-width: 750px) {
-    font-size: 1.6rem;
-    top: 90vh;
-    left:5rem; 
-    width: 70%;
-  } 
-  @media (max-width: 650px) {
-    font-size: 1.6rem;
-    top: 75vh;
-    left:5rem; 
-    width: 70%;
-  } 
-  @media (max-width: $layout-breakpoint-xsmall) {
-    font-size: 1.6rem;
-    top: 70vh;
-    left:3rem; 
-    width: 70%;
-  } 
-  .aboutHeader {
-    //margin: 3rem;
-    font-weight: 550;
-    //margin-left: 20rem;
-    //padding-bottom: 3rem;
-    color: rgb(0, 0, 0);
-    font-size: 60px;
-    line-height: auto;
-    text-align: left;
-    @media (max-width: $layout-breakpoint-medium) {
-        text-align: left;
-        margin: 0rem;
-        //margin-left: 10rem;
-        font-size: 40px;
-    }
-    @media (max-width: $layout-breakpoint-small) {
-        margin: 0rem;
-        margin-left: 0rem;
-        font-size: 40px;
-    }
-  }
-}
-
 .transition-image {
   position: absolute;
   top: 0;
@@ -199,6 +131,7 @@
   &.final {
     display: block;
     top: -128px;
+    height:auto;
     position: relative;
     width: 90%;
     margin: 0 auto;
