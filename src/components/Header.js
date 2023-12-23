@@ -19,7 +19,7 @@ const Header = () => {
       duration: 1.2,
       delay: 0.8,
     }}>
-      <div className="header-inner">
+      <div id="Home" className="header-inner">
         <div className="logo">
           <a href="https://www.petfinder.com" target="_blank" >
             <motion.img src={process.env.PUBLIC_URL + `/favicon.png`} 
@@ -30,7 +30,7 @@ const Header = () => {
           </a>
         </div>
         <ul className='nav'>
-                {['Home', 'Project', 'Work']
+                {['Home', 'Work', 'Project']
                 .map((item) => (
                     <li className='app__flex' key={`${item}`}>
                         <div/>

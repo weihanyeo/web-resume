@@ -1,0 +1,131 @@
+.footer {
+    font-size: 1.8rem;
+    height: 196px;
+    display: flex;
+    justify-content: right;
+    padding: 0 108px;
+    background-color: #1d1836;
+    @media (max-width: $layout-breakpoint-medium) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
+      height: 90px;
+      font-size: 1.2rem;
+    }
+    .footer-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      .social-buttons{
+        cursor: pointer;
+        width: 50px; /* Adjust the width of the button */
+        height: 50px; /* Adjust the height of the button */
+        background-color: #FAB2EA; /* Set the background color */
+        border-color: #830A48;
+        padding: 10px;
+        border-radius: 10px; /* Add rounded corners */
+        transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+        
+        &:hover {
+            background-color: #D0FEF5; /* Change background color on hover */
+        }
+        .fa-brands,
+        .fa-regular {
+            color: black;   
+            font-size: 30px; // Adjust the icon size if necessary
+        }
+        @media (max-width: $layout-breakpoint-small) {
+            margin-top: -15rem;
+            
+        }
+    }
+    .scroll-to-top-button {
+        cursor: pointer;
+        .scroll {
+            height: 100px;
+            width: 100px;
+            border-radius: 30%;
+            position: absolute;
+            background: #FAB2EA;
+            padding: 20px;
+            align-items: center;
+            font-weight: 500;
+            justify-content: center;
+            flex-direction: column;
+            left: 90%;
+            margin-bottom: 100px;
+            &:hover {
+                  color: #830A48;
+                  cursor: pointer;
+            }
+            .fa-solid {
+                font-size: 20px; // Adjust the icon size if necessary
+            }
+            @media (max-width: $layout-breakpoint-medium) {
+                left: 60px;  
+            }
+            @media (max-width: 1240px) {
+                display: none;
+                font-size: 10px;
+                margin: 2px 0;
+            }
+            span { 
+            font-size: 17px;
+            font-weight: 600;
+            margin: 4px 0;
+            @media (max-width: $layout-breakpoint-xsmall) {
+                font-size: 10px;
+                margin: 2px 0;
+                display: none;
+            }
+            }
+        }
+    }
+      .logo {
+        @media (max-width: $layout-breakpoint-medium) {
+          font-size: 3.2rem;
+        }
+      }
+      .nav {
+        display: flex;
+        flex-direction: column; /* Display as a column */
+        align-items: flex-end;  /* Align items to the right */
+        position: relative;
+        right: 10%; /* Align to the right */
+        top: 30%; /* Align to the top */
+        transform: translateY(-50%);
+        li {
+          list-style: none;
+          margin: 0 40px;
+          padding: 5px;
+          div { /* top dots */
+            width: 7px;
+            height: 7px;
+            background: transparent;
+            border-radius: 50%;
+            align-self: center; 
+            margin: 0 auto; 
+            margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+          }
+          a {
+            text-decoration: none;
+            color: #FAB2EA;
+            white-space: nowrap;
+            margin-left: 10px;
+          }&:hover {
+            a {
+              color: #830A48;
+              cursor: pointer;
+            }
+            div {
+              background: #830A48;
+            }
+          }
+        }
+      }
+    }
+  }
+  

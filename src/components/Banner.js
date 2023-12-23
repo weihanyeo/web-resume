@@ -51,7 +51,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <motion.div id="Home" className="banner" variants={banner}>
+    <motion.div className="banner" variants={banner}>
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
       {/* <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} /> */}
       <BannerRowBottom title="Software&nbsp;Developer" />

@@ -10,39 +10,17 @@ import Loader from "./components/Loader";
 import Project from "./components/Project";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     loading
       ? document.querySelector("body").classList.add("loading")
       : document.querySelector("body").classList.remove("loading");
-  
-    const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
-    };
-  
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, [loading]);
-
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0, 
-      behavior: "smooth"
-    });
-  };
 
   return (
     <motion.div className="app-container">
@@ -68,37 +46,15 @@ function App() {
                   }}/> 
               </motion.div>
             )}
-            <Project />
+            
             <Work/>
+            <Project />
             <Contact/>
+            <Footer/>
             </LayoutGroup>
           </>
         )}
       </AnimatePresence>
-      {showScrollButton && (
-        <div className="buttons">
-          <a href="https://www.figma.com/@yeoweihan" target="_blank" className="social-buttons">
-            <i class="fa-brands fa-figma"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/yeo-wei-han/" target="_blank" className="social-buttons">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="mailto:yeoweihan@u.nus.edu" className="social-buttons">
-            <i class="fa-regular fa-envelope"></i>
-          </a>
-          <a href="https://github.com/YeoWeiHan123" target="_blank" className="social-buttons">
-            <i class="fa-brands fa-github"></i>
-          </a>
-      
-          <div className="scroll-to-top-button" onClick={handleScrollToTop}>
-              <div className="scroll">
-                
-                <i class="fa-solid fa-arrow-up"></i>
-                back to top
-              </div>
-          </div>
-        </div>
-      )}
     </motion.div>
   );
 }
