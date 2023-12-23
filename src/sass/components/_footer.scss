@@ -3,13 +3,13 @@
     height: 196px;
     display: flex;
     justify-content: right;
-    padding: 0 108px;
+    padding: 0 15%;
     background-color: #1d1836;
     @media (max-width: $layout-breakpoint-medium) {
       font-size: 1.6rem;
     }
     @media (max-width: $layout-breakpoint-xsmall) {
-      height: 90px;
+      height: 130px;
       font-size: 1.2rem;
     }
     .footer-inner {
@@ -27,7 +27,12 @@
         padding: 10px;
         border-radius: 10px; /* Add rounded corners */
         transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
-        
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 35px; /* Adjust the width of the button */
+          height: 35px; /* Adjust the height of the button */
+          padding: 8px;
+          align-items: center;
+        }
         &:hover {
             background-color: #D0FEF5; /* Change background color on hover */
         }
@@ -35,9 +40,12 @@
         .fa-regular {
             color: black;   
             font-size: 30px; // Adjust the icon size if necessary
+            @media (max-width: $layout-breakpoint-xsmall) {
+              font-size: 20px;
+            }
         }
         @media (max-width: $layout-breakpoint-small) {
-            margin-top: -15rem;
+            margin-top: -10rem;
             
         }
     }
@@ -83,11 +91,6 @@
             }
         }
     }
-      .logo {
-        @media (max-width: $layout-breakpoint-medium) {
-          font-size: 3.2rem;
-        }
-      }
       .nav {
         display: flex;
         flex-direction: column; /* Display as a column */
