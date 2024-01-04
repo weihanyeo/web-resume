@@ -89,15 +89,27 @@
         font-size: 17px;
         font-weight: 600;
         margin: 4px 0;
-        @media (max-width: $layout-breakpoint-xsmall) {
-          font-size: 10px;
-          margin: 2px 0;
-          display: none;
-        }
       }
     }
   }
-  
+  .row-message2 { // short message on the right side
+    margin: 0;
+    margin-left: 55vw;
+    display: flex;
+    padding: 20px;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    width: 220px;
+    
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 1.5rem;
+      width: 200px;
+      margin-left: 65vw;
+    }@media (max-width: $layout-breakpoint-xsmall) {
+      display: none;
+      
+    }
+  }
 }
 
 .transition-image {

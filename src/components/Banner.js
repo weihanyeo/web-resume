@@ -55,6 +55,16 @@ const Banner = () => {
       <BannerRowTop title="Yeo&nbsp;&nbsp;Wei&nbsp;&nbsp;Han" />
       {/* <BannerRowCenter title={words[currentWordIndex]} playMarquee={playMarquee} /> */}
       <BannerRowBottom title="Software&nbsp;Developer" />
+      <motion.span className="row-message2"
+      initial={{opacity:0, y:80}} 
+      animate={{opacity: 1, y:0}} 
+      transition={{
+        ease: "easeInOut",
+        duration: 1.2,
+        delay: 1.2,
+      }}>
+        Open & looking for full-time roles or opportunities!
+      </motion.span>
     </motion.div>
   );
 };
@@ -79,6 +89,7 @@ const BannerRowTop = ({ title }) => {
         <div className="row-col">
           <AnimatedLetters title={title} />
         </div>
+        
         <motion.div className="row-col" 
         initial={{opacity:0, y:80}} 
         animate={{opacity: 1, y:0}} 
@@ -90,7 +101,9 @@ const BannerRowTop = ({ title }) => {
           <motion.span className="row-message">
           I am a passionate problem solver with a natural curiosity for knowledge.
           </motion.span>
+          
         </motion.div>
+        
       </div>
       
     </div>
@@ -118,6 +131,7 @@ const BannerRowBottom = ({ title }) => {
             delay: 1.8,
           }}>scroll <br/>down</motion.span>
         </motion.div> 
+        
       <AnimatedLetters title={title} />
     </div>
   );
