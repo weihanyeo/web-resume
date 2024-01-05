@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./sass/main.scss";
-import logo from './logo.svg';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 // Components
@@ -13,9 +12,24 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import SlideBar from './components/SlideBar';
+
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setIsActive(location.pathname === '/');
+  }, [location.pathname]);
+
+  const handleBurgerClick = () => {
+    console.log("Current state:", isActive);
+    setIsActive((prevIsActive) => !prevIsActive);
+  };
 
   useEffect(() => {
     loading
@@ -28,13 +42,21 @@ function App() {
       <AnimatePresence>
         {loading ? (
           <motion.div key='loader'> 
-          {/* // key is for a component to load out */}
           <Loader setLoading={setLoading} />
           </motion.div>
         ) : (
           <>
             <LayoutGroup >
             <Header/>
+            
+            <div className="header-slider">
+              <div onClick={handleBurgerClick} className="button">
+                <div className={`burger ${isActive ? "burgerActive" : "" }`}></div>
+              </div>
+            </div>
+            <AnimatePresence>
+              {isActive && <SlideBar />}
+            </AnimatePresence>
             <Banner/>
             
             {!loading && (

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div className="about-head">
+    <motion.div id="About" className="about-head">
         <motion.div className="sectionHeadText">About me</motion.div>.<br/><br/>
         <p className="sectionSubText">
         I am a penultimate student at the National University of Singapore completing my undergraduate 

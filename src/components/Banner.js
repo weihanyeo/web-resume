@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const banner = {
@@ -21,34 +21,7 @@ const letterAnimate = {
   },
 };
 
-/* const words = [
-  "Nature Enthusiast",
-  "Web Designer",
-  "Problem Solver",
-  "Animal lover",
-  "Film Buff",
-  "Tech Geek"
-]; */
-
 const Banner = () => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [playMarquee, setPlayMarquee] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setPlayMarquee(true);
-    }, 3000);
-  }, []);
-
-/*   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) =>
-        prevIndex === words.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // Change word every 4 seconds
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []); */
 
   return (
     <motion.div className="banner" variants={banner}>
@@ -110,7 +83,6 @@ const BannerRowTop = ({ title }) => {
   );
 };
 
-
 const BannerRowBottom = ({ title }) => {
   return (
     <div className={"banner-row center"}>
@@ -136,18 +108,5 @@ const BannerRowBottom = ({ title }) => {
     </div>
   );
 };
-/* 
-const BannerRowCenter = ({ title, playMarquee }) => {
-  return (
-    <div className={`banner-row marquee  ${playMarquee && "animate"}`}>
-      <div className="marquee__inner">
-        <AnimatedLetters title={title} disabled/> 
-        <AnimatedLetters title={title} />
-        <AnimatedLetters title={title} disabled/>
-        <AnimatedLetters title={title} disabled/>
-      </div>
-    </div>
-  );
-}; */
 
 export default Banner;

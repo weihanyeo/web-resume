@@ -75,7 +75,7 @@ const Contact = () => {
                 whileInView={scaleVariants.whileInView}
                 transition={{ duration: 0.5, type: 'tween' }}
                         > 
-    <div className="email-container" >
+    <div id="Contact" className="email-container" >
       <div className="input-box">
         <p className="sectionSubText">Get in touch</p>
         <h3 className="sectionHeadText">Contact.</h3>
