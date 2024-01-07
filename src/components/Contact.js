@@ -61,60 +61,62 @@ const Contact = () => {
   }
 
   return (
-    <motion.div variant={scaleVariants}
-                whileInView={scaleVariants.whileInView}
-                transition={{ duration: 0.5, type: 'tween' }}
-                        > 
-    <div id="Contact" className="email-container" >
-      <div className="input-box">
-        <p className="sectionSubText">Get in touch</p>
-        <h3 className="sectionHeadText">Contact.</h3>
-        <form ref={formRef} onSubmit={handleSubmit} className="forms-container">
-          <label className="flex-column">
-            <span className="inner-text">
-              Your Name
-            </span>
-            <input type="text" 
-            name="name" 
-            value={form.name}
-            onChange={handleChange} 
-            placeholder="What's your name?" 
-            className="custom-input"/>
-          </label>
-          
-          <label className="flex-column">
-            <span className="inner-text">
-              Your email
-            </span>
-            <input type="email" 
-            name="email" 
-            value={form.email}
-            onChange={handleChange} 
-            placeholder="What's your email?" 
-            className="custom-input"/>
-          </label>
+    <div id="Contact">
+      <motion.div variant={scaleVariants}
+                  whileInView={scaleVariants.whileInView}
+                  transition={{ duration: 0.5, type: 'tween' }}
+                          > 
+        <div  className="email-container" >
+          <div className="input-box">
+            <p className="sectionSubText">Get in touch</p>
+            <h3 className="sectionHeadText">Contact.</h3>
+            <form ref={formRef} onSubmit={handleSubmit} className="forms-container">
+              <label className="flex-column">
+                <span className="inner-text">
+                  Your Name
+                </span>
+                <input type="text" 
+                name="name" 
+                value={form.name}
+                onChange={handleChange} 
+                placeholder="What's your name?" 
+                className="custom-input"/>
+              </label>
+              
+              <label className="flex-column">
+                <span className="inner-text">
+                  Your email
+                </span>
+                <input type="email" 
+                name="email" 
+                value={form.email}
+                onChange={handleChange} 
+                placeholder="What's your email?" 
+                className="custom-input"/>
+              </label>
 
-          <label className="flex-column">
-            <span className="inner-text">
-              Your message
-            </span>
-            <textarea
-            rows="7"
-            name="message" 
-            value={form.message}
-            onChange={handleChange} 
-            placeholder="What do you want to say?" 
-            className="custom-input"/>
-          </label>
+              <label className="flex-column">
+                <span className="inner-text">
+                  Your message
+                </span>
+                <textarea
+                rows="7"
+                name="message" 
+                value={form.message}
+                onChange={handleChange} 
+                placeholder="What do you want to say?" 
+                className="custom-input"/>
+              </label>
 
-          <button type="submit"
-          className="submit-button">
-            {loading ? 'Sending...' : 'Send'}
-          </button>
-        </form>
-      </div>
+              <button type="submit"
+              className="submit-button">
+                {loading ? 'Sending...' : 'Send'}
+              </button>
+            </form>
+          </div>
+        </div>
+      </motion.div>
     </div>
-    </motion.div>
   )
 }
 

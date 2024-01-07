@@ -50,9 +50,9 @@ function App() {
             <Header/>
             
             <div className="header-slider">
-              <div onClick={handleBurgerClick} className="button">
+              <button  onClick={handleBurgerClick} className="button">
                 <div className={`burger ${isActive ? "burgerActive" : "" }`}></div>
-              </div>
+              </button >
             </div>
             <AnimatePresence>
               {isActive && <SlideBar />}
