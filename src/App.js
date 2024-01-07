@@ -45,7 +45,7 @@ function App() {
           <Loader setLoading={setLoading} />
           </motion.div>
         ) : (
-          <>
+          
             <LayoutGroup >
             <Header/>
             
@@ -75,7 +75,7 @@ function App() {
             <Contact/>
             <Footer/>
             </LayoutGroup>
-          </>
+          
         )}
       </AnimatePresence>
     </motion.div>

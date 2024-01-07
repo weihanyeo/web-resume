@@ -1,11 +1,17 @@
 .menu{
-    height: 100vh;
+    height: 100%;
     background-color: rgb(41, 41, 41);
     position: fixed;
     right: 0;
     top: 0;
     z-index: 99;
     color: white;
+    @media (max-width: $layout-breakpoint-xsmall) {
+        opacity: 0.95;
+    }
+    @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+    }
 
     .body{
         box-sizing: border-box;
@@ -51,18 +57,23 @@
                 color: white;
                 font-weight: 300;
                 cursor: pointer;
+                position: relative;
+                @media (max-width: $layout-breakpoint-small) {
+                    font-size: 48px;
+                }
+                @media (max-width: $layout-breakpoint-xsmall) {
+                    font-size: 40px;
+                }
             }
-            
         }
     }
-
-}
-.svgCurve{
-    position: absolute;
-    top: 0;
-    left: -99px;
-    width: 100px;
-    height: 100%;
-    fill: rgb(41, 41, 41);
-    stroke: none;
+    .svgCurve{
+        position: absolute;
+        top: 0;
+        left: -99px;
+        width: 100px;
+        height: 100%;
+        fill: rgb(41, 41, 41);
+        stroke: none;
+    }
 }

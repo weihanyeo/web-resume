@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
+import { motion } from 'framer-motion'; 
 import { menuSlide, scale, slide } from './Animate';
 
 const SlideBar = () => {
@@ -10,6 +9,17 @@ const SlideBar = () => {
     }
     return 0; // Set a default value if window is undefined
   });
+
+  const handleScrollTo = (id) => {
+    const targetElement = document.getElementById(id);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 70, // Adjust the offset as needed
+        behavior: "smooth",
+      });
+    }
+  };
 
   useEffect(() => {
     const updateWindowInnerHeight = () => {
@@ -24,6 +34,14 @@ const SlideBar = () => {
       window.removeEventListener('resize', updateWindowInnerHeight);
     };
   }, []); // Empty dependency array means this effect runs once when the component mounts
+
+  const handleMouseEnter = (item) => {
+    setSelectedIndicator(item);
+  };
+
+  const handleMouseLeave = () => {
+    setSelectedIndicator(null);
+  };
 
   const [selectedIndicator, setSelectedIndicator] = useState(null);
 
@@ -44,30 +62,41 @@ const SlideBar = () => {
     },
   };
 
-  const menuItems = ['Home','About', 'Work', 'Project', 'Contact'];
+  const menuItems = ['Home', 'About', 'Work', 'Project', 'Contact'];
 
   return (
     <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className="menu">
       <div className="body">
-        <div className="nav">
+        <div onMouseLeave={handleMouseLeave} className="nav">
           <div className="header">
             <p>Menu</p>
           </div>
 
           {menuItems.map((item) => (
-            <motion.div key={item} className="link" onMouseEnter={() => setSelectedIndicator(item)} custom={item} variants={slide} initial="initial" animate="enter" exit="exit">
-              <motion.div variants={scale} animate={selectedIndicator === item ? "open" : "closed"} className="indicator"></motion.div>
-              <Link
-                activeClass="active"
-                to={item}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                ease="cubic-bezier(0.645, 0.045, 0.355, 1)"
-              >
+            <motion.div 
+            key={item} 
+            className="link" 
+            onMouseEnter={() => handleMouseEnter(item)} 
+            custom={item} 
+            variants={slide} 
+            initial="initial" 
+            animate="enter" 
+            exit="exit">
+              
+              <motion.div
+                variants={scale}
+                animate={selectedIndicator === item ? 'open' : 'closed'}
+                className="indicator" // Replace with your desired class name or use inline styles
+              ></motion.div>
+
+              <a href={`#${item}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollTo(item);
+              }}>
                 {item}
-              </Link>
+              </a>
+              
             </motion.div>
           ))}
         </div>

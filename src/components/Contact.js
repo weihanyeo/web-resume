@@ -20,14 +20,6 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  
-  const handleScrollToTop = (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
 
   const [loading, setLoading] = useState(false);
 
@@ -68,9 +60,7 @@ const Contact = () => {
       })
   }
 
-
   return (
-    <>
     <motion.div variant={scaleVariants}
                 whileInView={scaleVariants.whileInView}
                 transition={{ duration: 0.5, type: 'tween' }}
@@ -125,7 +115,6 @@ const Contact = () => {
       </div>
     </div>
     </motion.div>
-    </>
   )
 }
 

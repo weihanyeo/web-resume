@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const handleScrollTo = (id) => {
+    const targetElement = document.getElementById(id);
 
-  const handleScrollToBottom = (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
-    });
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 70, // Adjust the offset as needed
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -38,22 +39,28 @@ const Header = () => {
           {['Home', 'Work', 'Project'].map((item) => (
             <li className='app__flex' key={`${item}`}>
               <div />
-              <Link
-                activeClass="active"
-                to={item}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                ease="cubic-bezier(0.645, 0.045, 0.355, 1)"
+              <a
+                href={`#${item}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollTo(item);
+                }}
               >
                 {item}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
         <div className="contact">
-          <a onClick={handleScrollToBottom} href="/Contact">Get in touch</a>
+          <a
+            href="#Contact"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollTo('Contact');
+            }}
+          >
+            Get in touch
+          </a>
         </div>
       </div>
     </motion.div>
