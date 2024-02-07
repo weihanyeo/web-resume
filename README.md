@@ -17,6 +17,4 @@
 
 ![Preview of Portfolio](https://github.com/YeoWeiHan123/web-resume/assets/36888332/c75fcdc1-ea33-4ca7-b7d7-a61716c6279c)
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=yeoweihan123&show_icons=true&locale=en&layout=compact" alt="yeoweihan123" /></p>
-
 
