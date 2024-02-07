@@ -1,4 +1,4 @@
-# Hello Thanks for dropping by!!
+<h1 align="left">Hello I am Yeo Wei Han</h1>
 
 ### This project is hosted live ([here](https://yeoweihan123.github.io/web-resume/))
 
