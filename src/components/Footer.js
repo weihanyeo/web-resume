@@ -69,7 +69,7 @@ const Footer = () => {
               <div className="scroll">
                 
                 <i class="fa-solid fa-arrow-up"></i>
-                back to top
+                
               </div>
           </div>
         </div>

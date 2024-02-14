@@ -16,6 +16,7 @@
       width: 110%;
       display: flex;
       align-items: center;
+      padding: 0 0;
       justify-content: space-between;
       .social-buttons{
         cursor: pointer;
@@ -51,12 +52,12 @@
     .scroll-to-top-button {
         cursor: pointer;
         .scroll {
-            height: 100px;
-            width: 100px;
+            height: 40px;
+            width: 40px;
             border-radius: 30%;
             position: fixed;
             background: #FAB2EA;
-            padding: 20px;
+            padding: 12px;
             align-items: center;
             font-weight: 500;
             justify-content: center;

@@ -12,11 +12,9 @@ const experiences = [
       iconBg: "#383E56",
       date: "May 2023 - Jul 2023",
       points: [
-          "Drafted and tailored engagement proposal letters, demonstrating effective communication and presentation of comprehensive project scopes to a client.",
-          "Prepared over 100 User to Role Matrices using client inputs, ensuring precise mapping of user access and authorizations in complex SAP environments and link several organization matrix data into Tableau for visualization.",
-          "Automated the extraction and integration of SAP data into Power BI, improving reporting efficiency and insights.",
+          "Drafted technical engagement proposal letters, effectively communicating, and presenting technical challenges and solutions to clients",
+          "Automated the extraction and integration of SAP data into Power BI. Achieved a 25% operational efficiency gain, measured by a 40% reduction in data processing time, resulting in enhanced reporting capabilities and deeper insights.",
           "Utilized Jira for issue tracking and project management, ensuring efficient coordination and streamlined workflows across teams.",
-          
       ],
   },
   {
@@ -26,9 +24,9 @@ const experiences = [
       iconBg: "#E6DEDD",
       date: "May 2022 - Aug 2022",
       points: [
-          "Specialized in providing technical support and maintenance. Deployed, cloned hardware change operations for healthcare technology solutions for thousands of devices.",
-          "Utilized CRON to automate routine tasks, enhancing operational efficiency in managing healthcare technology solutions. Which includes scheduling regular maintenance activities and system checks.",
-          "Applied an in-depth understanding of TCP/IP networking fundamentals and expertise in internet service architectures (load balancing, CDNs), enhancing the efficiency and resilience of healthcare technology solutions.",
+          "Specialized in providing technical support and maintenance. Deployed, cloned hardware change operations for healthcare technology solutions for thousands of devices for supporting end users.",
+          "Utilized task scheduler and batch scripting to automate routine tasks, enhancing operational. Achieved a 20% process optimization as measured by reducing processing time by 45 mins daily.",
+          "Additional learning: Learn about TCP/IP networking fundamentals in internet service architectures (load balancing, CDNs).",
       ],
   },
   {
