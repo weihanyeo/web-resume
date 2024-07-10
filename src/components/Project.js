@@ -2,25 +2,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const projects = [
-    { 
+    {
         title: 'Tshirt Visualiser',
         description: 'Front-end t-shirt customisable website',
         imgUrl: `${process.env.PUBLIC_URL}/images/project_4.png`,
-        imgNewTab: 'https://yeoweihan123.github.io/T-shirt/'
+        imgNewTab: 'https://weihanyeo.github.io/T-shirt/'
     },
-    { 
+    {
         title: 'Travel Collab Mobile app',
         description: 'Design project for a travel app.',
         imgUrl: `${process.env.PUBLIC_URL}/images/project_3.png`,
         imgNewTab: 'https://www.figma.com/community/file/1251925183530294422'
     },
-    { 
+    {
         title: 'HangManHTML',
         description: 'Game developed during Tik-tok coding camp.',
         imgUrl: `${process.env.PUBLIC_URL}/images/project_2.png`,
-        imgNewTab: 'https://yeoweihan123.github.io/HangmanHtml/'
+        imgNewTab: 'https://weihanyeo.github.io/HangmanHtml/'
     },
-    { 
+    {
         title: 'Patrol Bot',
         description: 'Autonomous robot + computer vision and voice command to help visitors at a hospital.',
         imgUrl: `${process.env.PUBLIC_URL}/images/project_1.png`,
@@ -53,7 +53,7 @@ const Project = () => {
                         onClick={() => openProjectInNewTab(project.imgNewTab)}
                         style={{ cursor: 'pointer' }}
                     >
-                        <img src={project.imgUrl} alt={project.title}/>
+                        <img src={project.imgUrl} alt={project.title} />
                         <h2 className='bold-text' style={{ marginTop: 20 }}>
                             {project.title}
                         </h2>
