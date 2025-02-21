@@ -49,7 +49,7 @@ const Contact = () => {
       process.env.REACT_APP_SERVICE_LINK,
       process.env.REACT_APP_TEMPLATE_LINK,
       templateParams,
-      process.env.REACT_APP_EMAILJS_API_KEY
+      "Ot57nFvV3a4tLJFzZ"
     )
       .then((result) => {
         console.log("EmailJS Success Response:", result);
