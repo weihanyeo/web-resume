@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+emailjs.init(process.env.REACT_APP_EMAILJS_API_KEY);
 const scaleVariants = {
   whileInView: {
     scale: [0.8, 1],
