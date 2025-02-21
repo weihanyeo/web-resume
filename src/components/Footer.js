@@ -51,18 +51,18 @@ const Footer = () => {
         </div>
 
         {showScrollButton && (
-          <div className="buttons">
-            <a href="https://www.figma.com/@yeoweihan" target="_blank" className="social-buttons">
-              <i class="fa-brands fa-figma"></i>
+          <div className="social-buttons">
+            <a href="https://www.figma.com/@yeoweihan" target="_blank" className="social-button">
+              <i className="fa-brands fa-figma"></i>
             </a>
-            <a href="https://www.linkedin.com/in/yeo-wei-han/" target="_blank" className="social-buttons">
-              <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/yeo-wei-han/" target="_blank" className="social-button">
+              <i className="fa-brands fa-linkedin"></i>
             </a>
-            <a href="mailto:yeoweihan@u.nus.edu" className="social-buttons">
-              <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:yeoweihan@u.nus.edu" className="social-button">
+              <i className="fa-regular fa-envelope"></i>
             </a>
-            <a href="https://github.com/weihanyeo" target="_blank" className="social-buttons">
-              <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/weihanyeo" target="_blank" className="social-button">
+              <i className="fa-brands fa-github"></i>
             </a>
 
             <div className="scroll-to-top-button" onClick={handleScrollToTop}>

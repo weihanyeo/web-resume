@@ -40,6 +40,10 @@
         font-size: 5rem;
         letter-spacing: -0.2rem;
       }
+      @media (max-width: $layout-breakpoint-xxsmall) {
+        font-size: 4rem;
+        letter-spacing: -0.2rem;
+      }
     }
     .row-col {
       width: 60%;
@@ -58,7 +62,8 @@
         width: 100%;
         justify-content: flex-start;
       }
-      .row-message { // short message on the right side
+      .row-message {
+        // short message on the right side
         font-weight: 50;
         font-size: 1.8rem;
         line-height: 2.6rem;
@@ -85,14 +90,15 @@
         font-size: 10px;
         margin: 2px 0;
       }
-      span { 
+      span {
         font-size: 17px;
         font-weight: 600;
         margin: 4px 0;
       }
     }
   }
-  .row-message2 { // short message on the right side
+  .row-message2 {
+    // short message on the right side
     margin: 0;
     margin-left: 55vw;
     display: flex;
@@ -100,14 +106,14 @@
     font-size: 1.8rem;
     line-height: 2.6rem;
     width: 220px;
-    
+
     @media (max-width: $layout-breakpoint-small) {
       font-size: 1.5rem;
       width: 200px;
       margin-left: 65vw;
-    }@media (max-width: $layout-breakpoint-xsmall) {
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
       display: none;
-      
     }
   }
 }
@@ -143,7 +149,7 @@
   &.final {
     display: block;
     top: -128px;
-    height:auto;
+    height: auto;
     position: relative;
     width: 90%;
     margin: 0 auto;
