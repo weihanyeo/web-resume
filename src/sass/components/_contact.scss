@@ -1,121 +1,135 @@
 .email-container {
-    margin-top: 10rem; /* You can adjust the margin-top value as needed */
-    margin-left: 10%;
-    margin-right: 40%; 
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* You can adjust the gap value as needed */
-    overflow: hidden;
-    width: 900px; /* Set the desired width */
-    min-width: 800px;
-    max-width: 90%; /* Optionally, set a maximum width to ensure it doesn't become too wide */
-    height: 600px; /* Set the desired height */
-    margin-bottom: 100px;
-    @media (max-width: $layout-breakpoint-small) {
-        margin-right: 0%; 
-        margin-top: 12rem;
-        width: 80%; 
-        min-width: 80%;
-        max-width: 100%; 
-        
+  padding: 4rem 2rem;
+  margin: 8rem auto;
+  width: 90%;
+  max-width: 1000px;
+  min-height: 600px;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+    margin: 4rem auto;
+  }
+
+  .input-box {
+    background-color: #000;
+    padding: 3rem;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      padding: 2rem;
     }
-    .input-box {
-        flex: 0.75;
-        background-color: #000;
-        padding: 8px;
-        border-radius: 20px; /* Adjust the value based on your preference */
-        color: white; /* Text color */
-        .sectionHeadText {
-            margin: 3rem;
-            padding-bottom: 3rem;
-            color: white;
-            font-size: 60px;
-            line-height: 30px;
-            @media (max-width: $layout-breakpoint-medium) {
-                margin: 3rem;
-                font-size: 40px;
-            }
-            @media (max-width: $layout-breakpoint-small) {
-                margin: 1rem;
-                margin-left: 3rem;
-                margin-bottom: -1rem;
-                font-size: 40px;
-            }
-        }
-        /* CSS for sectionSubText */
-        .sectionSubText {
-            margin: 3rem;
-            color: #777777;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            @media (max-width: $layout-breakpoint-medium) {
-                margin: 3rem;
-            }
-            @media (max-width: $layout-breakpoint-small) {
-                margin: 3rem;
-                margin-bottom: 1rem;
-            }
-        }
-        .forms-container {
-            margin-top: 3rem;
-            margin: 3rem;  
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            .flex-column {
-                display: flex;
-                flex-direction: column;
-                .inner-text {
-                    color: white;
-                    font-weight: 500; /* Medium font-weight */
-                    margin-bottom: 1rem; /* 4 times 0.25rem (default line height) equals 1rem */
-                }
-                .custom-input {
-                    background-color: #ffffff; /* Replace 'your-tertiary-color' with your desired tertiary color code */
-                    padding-top: 1rem; /* Equivalent to py-4 */
-                    padding-bottom: 1rem; /* Equivalent to py-4 */
-                    padding-left: 1.5rem; /* Equivalent to px-6 */
-                    padding-right: 1.5rem; /* Equivalent to px-6 */
-                    color: rgb(163, 155, 155);
-                    border-radius: 0.5rem; /* Adjust the border radius as needed */
-                    border: none;
-                    outline: none;
-                    font-weight: 500;
-                }
-                .custom-input::placeholder {
-                    color: #830A48;
-                }
-            }
-            .submit-button {
-                background-color: #FAB2EA; /* Replace 'your-tertiary-color' with your desired tertiary color code */
-                padding-top: 0.75rem; /* Equivalent to py-3 */
-                padding-bottom: 0.75rem; /* Equivalent to py-3 */
-                padding-left: 2rem; /* Equivalent to px-8 */
-                padding-right: 2rem; /* Equivalent to px-8 */
-                color: black;
-                font-weight: bold;
-                outline: none;
-                width: fit-content; /* Allows the button to fit its content */
-                border: none;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
-                border-radius: 0.5rem; /* Adjust the border radius as needed */
-            }
-            .submit-button:hover {
-            background-color: #D0FEF5; /* Replace 'your-hover-color' with your desired hover color code */
-            }
-        }
+
+    .sectionHeadText {
+      font-size: 60px; // Reverted to original size
+      line-height: 30px;
+      margin-bottom: 1.5rem;
+      margin-left: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 40px; // Reverted to original size
+        margin-left: 1rem;
+      }
     }
+
+    .sectionSubText {
+      color: #777777;
+      text-transform: uppercase;
+      font-size: 14px; // Reverted to original size
+      letter-spacing: 1px;
+      margin-bottom: 3rem;
+      margin-left: 2rem;
+
+      @media (max-width: 768px) {
+        margin-left: 1rem;
+      }
+    }
+
+    .forms-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+        gap: 2rem;
+      }
+
+      .flex-column {
+        .inner-text {
+          color: white;
+          font-weight: 500;
+          margin-bottom: 1.5rem; // Increased spacing between label and input
+          font-size: 14px; // Adjusted size
+          display: block; // Ensures proper spacing
+          padding-left: 0.5rem; // Slight padding to align with input
+        }
+
+        .custom-input {
+          width: 100%;
+          background-color: #ffffff;
+          padding: 1rem 1.5rem; // Adjusted padding
+          color: #333;
+          border-radius: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          transition: all 0.3s ease;
+          font-size: 14px; // Adjusted size
+          margin-top: 0.5rem; // Added space after label
+
+          &:focus {
+            border-color: #fab2ea;
+            box-shadow: 0 0 0 2px rgba(250, 178, 234, 0.2);
+          }
+
+          &::placeholder {
+            color: #830a48;
+            opacity: 0.7;
+          }
+        }
+
+        textarea.custom-input {
+          min-height: 180px;
+          resize: vertical;
+        }
+      }
+
+      .submit-button {
+        align-self: flex-start;
+        background-color: #fab2ea;
+        padding: 0.75rem 2rem;
+        color: black;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px; // Adjusted size
+        margin-top: 1rem;
+
+        &:hover {
+          background-color: #d0fef5;
+          transform: translateY(-2px);
+        }
+
+        &:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
 }
 
-//@import '../src/logo.svg';
 .buttons {
-    background-color: transparent !important;
-    font-size: 2rem;
-    padding: 1rem;
-    margin-bottom: 10rem;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 3rem 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }

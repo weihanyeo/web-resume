@@ -82,6 +82,9 @@ const Contact = () => {
           <div className="input-box">
             <p className="sectionSubText">Get in touch</p>
             <h3 className="sectionHeadText">Contact.</h3>
+            <br />
+            <br />
+            <br />
             <form ref={formRef} onSubmit={handleSubmit} className="forms-container">
               <label className="flex-column">
                 <span className="inner-text">Your Name</span>
