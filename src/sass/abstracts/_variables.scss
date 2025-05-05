@@ -5,8 +5,34 @@ $layout-breakpoint-small: 960px;
 $layout-breakpoint-xsmall: 660px;
 $layout-breakpoint-xxsmall: 460px;
 
-// Colors
-$background: #e1d2ef;
-$white: #fff;
-$black: #24242a;
-$secondary-colors: #830a48;
+// Colors - Neobrutalist Palette
+$background: #FFFFFF;
+$background-alt: #F5F5F5;
+$white: #FFFFFF;
+$black: #000000; // Pure black for text and borders
+$accent: #FF470F; // Neon orange accent
+
+// Grid Settings
+$grid-columns: 12;
+$grid-gutter: 24px;
+
+// Typography
+$font-heading: 'Montserrat', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// Font Sizes
+$font-size-h1: 64px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+$font-size-body: 16px;
+$font-size-caption: 14px;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Shadows
+$shadow-neobrutalist: 4px 4px 0px $black;

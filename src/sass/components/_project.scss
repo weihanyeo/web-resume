@@ -3,99 +3,211 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 32px;
+    
     .app-profile-item {
-        width: 190px;
+        width: 220px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-        margin: 2rem;
+        margin: 32px 24px 24px 24px; // Extra top margin for thumbtack
+        padding: 24px 16px 16px 16px; // Extra top padding for thumbtack
+        border: 2px solid $black;
+        background-color: #FFFF88; // Post-it yellow color
+        box-shadow: $shadow-neobrutalist;
+        transition: all 0.2s ease;
+        position: relative; // For thumbtack positioning
+        transform: rotate(-1deg); // Slight rotation for post-it effect
+        
+        // Post-it note styling
+        &.post-it {
+            &:nth-child(odd) {
+                background-color: #FFFF88; // Yellow post-it
+                transform: rotate(-1deg);
+            }
+            
+            &:nth-child(even) {
+                background-color: #FFCCE5; // Pink post-it
+                transform: rotate(1deg);
+            }
+            
+            &:nth-child(3n) {
+                background-color: #CCFFCC; // Green post-it
+                transform: rotate(-0.5deg);
+            }
+            
+            &:nth-child(4n) {
+                background-color: #CCE5FF; // Blue post-it
+                transform: rotate(0.5deg);
+            }
+        }
+        
+        // Thumbtack container
+        .thumbtack-container {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            
+            .thumbtack-icon {
+                width: 30px;
+                height: 30px;
+                filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
+            }
+        }
     
         img {
-        width: 100%;
-        height: 170px;
-        border-radius: 15px;
-        object-fit: cover;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid $black;
+            margin-bottom: 16px;
+        }
+        
+        &:hover {
+            transform: translate(-2px, -2px) rotate(0deg) !important;
+            box-shadow: 6px 6px 0px $black;
         }
     
         @media (max-width: $layout-breakpoint-large) {
-        width: 370px;
-        margin: 2rem 4rem;
+            width: 300px;
+            margin: 24px 32px;
+            
             img {
-                height: 320px;
+                height: 240px;
             }
         }
+        
+        @media (max-width: $layout-breakpoint-small) {
+            width: 250px;
+            margin: 16px;
+            
+            img {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: $layout-breakpoint-xsmall) {
+            width: 200px;
+            margin: 12px;
+            
+            img {
+                height: 160px;
+            }
+        }
+        
         .bold-text {
-            font-size: 1rem;
-            font-weight: 50;
-            text-align: left;
+            font-family: $font-heading;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-h3;
+            color: $black;
+            text-align: center;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            text-decoration: underline;
+            width: 100%;
         
             @media (max-width: $layout-breakpoint-large) {
-            font-size: 1.25rem;
+                font-size: 22px;
             }
         
+            @media (max-width: $layout-breakpoint-small) {
+                font-size: 20px;
+            }
+            
             @media (max-width: $layout-breakpoint-xsmall) {
-            font-size: 1.5rem;
+                font-size: 18px;
             }
         }
-        .p-text{
-            text-align: left;
+        
+        .p-text {
+            font-family: $font-body;
+            font-weight: $font-weight-medium;
+            font-size: $font-size-body;
+            color: $black;
+            text-align: center;
             line-height: 1.5;
+            margin-top: 0;
+            font-style: italic;
         
             @media (max-width: $layout-breakpoint-large) {
-            font-size: 2rem;
+                font-size: 15px;
+            }
+            
+            @media (max-width: $layout-breakpoint-small) {
+                font-size: 14px;
+            }
+            
+            @media (max-width: $layout-breakpoint-xsmall) {
+                font-size: 13px;
             }
         }
     }
 }
 
-.project-head{
+.project-head {
+    border: 2px solid $black;
+    padding: 32px;
+    margin: 32px 0;
+    background-color: $background-alt;
+    position: relative;
+    
     .sectionHeadText {
-        margin: 3rem;
-        font-weight: 600;
-        margin-left: 20rem;
-        padding-bottom: 3rem;
-        color: rgb(0, 0, 0);
-        font-size: 60px;
-        line-height: auto;
+        margin: 32px;
+        margin-left: 32px;
+        padding-bottom: 24px;
+        color: $black;
+        font-family: $font-heading;
+        font-weight: $font-weight-extrabold;
+        font-size: $font-size-h2;
+        line-height: 1.2;
+        text-align: left;
+        border-bottom: 2px solid $black;
+        max-width: 600px;
+        
         @media (max-width: 1360px) {
             margin: 3rem;
             margin-left: 10rem;
             font-size: 40px;
         }
+        
         @media (max-width: $layout-breakpoint-small) {
             margin: 1rem;
             margin-left: 5rem;
             font-size: 40px;
         }
+        
         @media (max-width: $layout-breakpoint-xsmall) {
             margin: 1rem;
             margin-left: 3rem;
             font-size: 40px;
         }
     }
-    /* CSS for sectionSubText */
+    
     .sectionSubText {
-        margin: 3rem;
-        font-weight: 600;
-        margin-left: 20rem;
-        color: #777777;
+        margin: 32px;
+        margin-left: 32px;
+        font-family: $font-body;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-caption;
+        color: $black;
         text-transform: uppercase;
-        font-size: 14px;
-        letter-spacing: 1px;
+        letter-spacing: 0.05em;
+        
         @media (max-width: 1360px) {
-            margin: 1rem;
+            margin: 3rem;
             margin-left: 10rem;
         }
+        
         @media (max-width: $layout-breakpoint-small) {
             margin: 1rem;
-            margin-top: 5rem;
             margin-left: 5rem;
         }
+        
         @media (max-width: $layout-breakpoint-xsmall) {
             margin: 1rem;
-            margin-top: 5rem;
             margin-left: 3rem;
         }
     }

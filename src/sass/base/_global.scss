@@ -1,3 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: $background;
+  color: $black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: $font-body;
+  font-weight: $font-weight-regular;
+  
+  &.custom-cursor-active {
+    cursor: none !important;
+    
+    *, *:hover, *:active, *:focus {
+      cursor: none !important;
+    }
+    
+    a, button, input, textarea, select, [role="button"], [role="link"],
+    .btn, .clickable, [onclick], [class*="link"], [class*="button"],
+    [tabindex]:not([tabindex="-1"]) {
+      cursor: none !important;
+    }
+  }
+}
+
+// Neobrutalist button styles
+.btn {
+  font-family: $font-body;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-caption;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: $accent;
+  color: $white;
+  border: 2px solid $black;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: $shadow-neobrutalist;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    background-color: $black;
+    color: $accent;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px $black;
+  }
+}
+
+// Image styling
+img {
+  border: 3px solid $black;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Form elements
+input, textarea, select {
+  font-family: $font-body;
+  font-size: $font-size-body;
+  background: $white;
+  border: 2px solid $black;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 16px;
+  
+  &:focus {
+    outline: none;
+    border-color: $accent;
+  }
+  
+  &::placeholder {
+    color: $black;
+    text-transform: uppercase;
+    font-size: $font-size-caption;
+  }
+}
+
+// Caption text
+.caption {
+  font-family: $font-body;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-caption;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
 }

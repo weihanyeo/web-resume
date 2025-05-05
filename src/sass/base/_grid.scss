@@ -1,0 +1,92 @@
+// Neobrutalist Grid System
+// 12-column grid with 24px gutters
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $grid-gutter;
+  position: relative;
+  
+  // Development mode - uncomment to see grid
+  // outline: 1px solid hotpink;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  gap: $grid-gutter;
+  width: 100%;
+  
+  // Development mode - uncomment to see grid
+  // > * {
+  //   outline: 1px solid hotpink;
+  // }
+}
+
+// Column spans
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    grid-column: span $i;
+    
+    // Development mode - uncomment to see grid
+    // outline: 1px solid hotpink;
+  }
+}
+
+// Intentional asymmetry for neobrutalist style
+.col-asymmetric {
+  grid-column: span 5;
+  margin-top: 24px;
+  
+  // Development mode - uncomment to see grid
+  // outline: 1px solid hotpink;
+}
+
+// Responsive grid adjustments
+@media (max-width: $layout-breakpoint-medium) {
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      grid-column: span $i;
+    }
+  }
+  
+  // Stack all columns on small screens
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Neobrutalist section styling
+.section {
+  border: 2px solid $black;
+  padding: 32px;
+  margin-bottom: 32px;
+  position: relative;
+  
+  &:nth-child(odd) {
+    background-color: $background;
+  }
+  
+  &:nth-child(even) {
+    background-color: $background-alt;
+  }
+  
+  // Development mode - uncomment to see grid
+  // outline: 1px solid hotpink;
+}
+
+// Helper to expose grid during development
+.dev-mode {
+  .container, .grid, [class^="col-"] {
+    outline: 1px solid hotpink;
+  }
+}

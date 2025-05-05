@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import ClipboardClip from "./ClipboardClip";
 
 const scaleVariants = {
   whileInView: {
@@ -78,13 +79,15 @@ const Contact = () => {
         whileInView={scaleVariants.whileInView}
         transition={{ duration: 0.5, type: 'tween' }}
       >
-        <div className="email-container">
-          <div className="input-box">
-            <p className="sectionSubText">Get in touch</p>
-            <h3 className="sectionHeadText">Contact.</h3>
-            <br />
-            <br />
-            <br />
+        <div className="email-container clipboard">
+          <div className="clipboard-top">
+            <ClipboardClip />
+          </div>
+          <div className="input-box clipboard-paper">
+            <div className="clipboard-header">
+              <p className="sectionSubText">Get in touch</p>
+              <h3 className="sectionHeadText">Contact.</h3>
+            </div>
             <form ref={formRef} onSubmit={handleSubmit} className="forms-container">
               <label className="flex-column">
                 <span className="inner-text">Your Name</span>

@@ -1,0 +1,106 @@
+// Custom cursor styling
+.custom-cursor {
+  position: fixed;
+  width: 53px; // Half the previous size (106px / 2)
+  height: 53px; // Half the previous size (106px / 2)
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  border: 2px solid $black; // Slightly smaller border for smaller cursor
+  box-shadow: 4px 4px 0 $accent; // Orange shadow by default
+  // 180 degrees per minute = 2 minutes for full 360 degrees
+  animation: rotate-cursor 120s linear infinite;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  // Hide default cursor
+  &.active {
+    cursor: none;
+  }
+  
+  // Hover state - Neobrutalist style
+  &.hover {
+    background-color: $accent; // Orange background
+    box-shadow: 4px 4px 0 $black; // Black shadow on hover
+    
+    .cursor-text {
+      svg text {
+        fill: $black !important; // Black text
+      }
+    }
+    
+    .cursor-star svg {
+      stroke: $black; // Black star
+    }
+  }
+  
+  // Click state
+  &.clicking {
+    animation: none; // Pause the rotation during click
+    transform: translate(-50%, -50%) scale(0.9) !important; // Override the rotation transform
+    box-shadow: 2px 2px 0 $black; // Reduced shadow on click
+  }
+  
+  // Center star
+  .cursor-star {
+    width: 20px; // Smaller star for smaller cursor
+    height: 20px;
+    position: relative;
+    transition: transform 0.2s ease;
+    
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      stroke: $white;
+      stroke-width: 1.5px; // Slightly thinner stroke for smaller cursor
+    }
+  }
+  
+  // Circular text
+  .cursor-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Design by footer
+.design-by-footer {
+  position: fixed;
+  bottom: 16px;
+  left: 16px; // Changed from right to left
+  background-color: $accent;
+  color: $black;
+  font-family: $font-body;
+  font-weight: $font-weight-bold;
+  padding: 8px 16px;
+  border: 2px solid $black;
+  box-shadow: $shadow-neobrutalist;
+  z-index: 100;
+  font-size: 14px;
+  
+  @media (max-width: $layout-breakpoint-small) {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+// Animations
+@keyframes rotate-cursor {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg); // Clockwise rotation
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg); // Clockwise rotation
+  }
+}

@@ -1,9 +1,12 @@
 body.loading {
   overflow: hidden;
   height: 100vh;
+  background-color: $background;
 }
 
 .loader {
+  background-color: $background;
+  
   .loader-inner {
     .image-block {
       position: absolute;
@@ -11,6 +14,10 @@ body.loading {
       display: flex;
       align-items: center;
       justify-content: center;
+      border: 3px solid $black;
+      box-shadow: $shadow-neobrutalist;
+      background-color: $white;
+      padding: 16px;
       &.image-1 {
         width: 400px;
         left: 16%;

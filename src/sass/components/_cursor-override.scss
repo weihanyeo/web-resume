@@ -1,0 +1,44 @@
+// Global cursor overrides - only when using mouse
+@media (pointer: fine) {
+  html.custom-cursor-active,
+  body.custom-cursor-active,
+  html.custom-cursor-active *,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+
+  // Override for specific elements
+  html.custom-cursor-active a,
+  html.custom-cursor-active button,
+  html.custom-cursor-active input,
+  html.custom-cursor-active textarea,
+  html.custom-cursor-active select,
+  html.custom-cursor-active [role="button"],
+  html.custom-cursor-active [role="link"],
+  html.custom-cursor-active .btn,
+  html.custom-cursor-active [onclick],
+  html.custom-cursor-active [style*="cursor: pointer"] {
+    cursor: none !important;
+  }
+
+  // Override hover states
+  html.custom-cursor-active *:hover {
+    cursor: none !important;
+    
+    &:hover, &:active, &:focus {
+      cursor: none !important;
+    }
+  }
+  
+  // Target browser-specific cursors
+  [style*="cursor"] {
+    cursor: none !important;
+  }
+}
+
+/* Ensure default cursor is shown when using keyboard or touch */
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

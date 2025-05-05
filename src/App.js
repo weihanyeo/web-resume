@@ -11,6 +11,7 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import CustomCursor from "./components/CustomCursor";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import SlideBar from './components/SlideBar';
 
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <motion.div className="app-container">
+      <CustomCursor />
       <AnimatePresence>
         {loading ? (
           <motion.div key='loader'> 
@@ -59,17 +61,20 @@ function App() {
             </AnimatePresence>
             <Banner/>
             
-            {!loading && (
-              <motion.div className="transition-image final">
-                <motion.img src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-                layoutId="main-image-1"
-                transition={{ease: [0.6, 0.01, 0.05, 0.9], duration: 1.6}}
-                style={{ 
-                  width: '850px', // Set the desired width
-                  }}/> 
-              </motion.div>
-            )}
-            <About />
+            <div className="about-container">
+              {!loading && (
+                <motion.div className="transition-image final">
+                  <motion.img src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+                  layoutId="main-image-1"
+                  transition={{ease: [0.6, 0.01, 0.05, 0.9], duration: 1.6}}
+                  style={{ 
+                    width: '100%', // Make it responsive
+                    maxWidth: '850px', // Maximum width
+                    }}/> 
+                </motion.div>
+              )}
+              <About />
+            </div>
             <Work/>
             <Project />
             <Contact/>

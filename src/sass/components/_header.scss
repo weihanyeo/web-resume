@@ -1,89 +1,141 @@
 .header {
-  font-size: 1.8rem;
-  height: 156px;
+  height: 120px;
   display: flex;
   justify-content: center;
-  padding: 0 108px;
+  padding: 0 32px;
   color: $black;
+  border-bottom: 2px solid $black;
+  background-color: $white;
+  
   @media (max-width: $layout-breakpoint-medium) {
-    padding: 0 72px;
-    font-size: 1.6rem;
+    padding: 0 24px;
   }
+  
   @media (max-width: $layout-breakpoint-xsmall) {
-    padding: 0 12px;
-    height: 96px;
-    font-size: 1.2rem;
+    padding: 0 16px;
+    height: 80px;
   }
+  
   .header-inner {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     .logo {
-      font-weight: 700;
-      font-size: 3.6rem;
+      font-family: $font-heading;
+      font-weight: $font-weight-bold;
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 2px solid $black;
+      padding: 8px 16px;
+      box-shadow: $shadow-neobrutalist;
+      background-color: $accent;
+      color: $white;
+      
       @media (max-width: $layout-breakpoint-medium) {
-        font-size: 3.2rem;
+        font-size: 28px;
         flex: 4;
       }
-    }
-    .nav {
-      @media (max-width: $layout-breakpoint-medium) {
-        display: none;
+      
+      @media (max-width: $layout-breakpoint-xsmall) {
+        font-size: 20px;
+        padding: 6px 12px;
       }
+    }
+    
+    .nav {
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      
+      @media (max-width: $layout-breakpoint-medium) {
+        display: none;
+      }
+      
       li {
         list-style: none;
-        margin: 0 40px;
-        padding: 5px;
-        div { /* top dots */
-          width: 7px;
-          height: 7px;
+        margin: 0 32px;
+        padding: 8px;
+        position: relative;
+        
+        div { /* top markers */
+          width: 8px;
+          height: 8px;
           background: transparent;
-          border-radius: 50%;
           align-self: center; 
           margin: 0 auto; 
-          margin-bottom: 5px;
-          transition: all 0.3s ease-in-out;
+          margin-bottom: 8px;
+          border: 2px solid $black;
+          transition: all 0.2s ease-in-out;
         }
+        
         a {
           text-decoration: none;
           color: $black;
           white-space: nowrap;
-        }&:hover {
+          font-family: $font-body;
+          font-weight: $font-weight-medium;
+          font-size: $font-size-caption;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 4px;
+          transition: all 0.2s ease;
+        }
+        
+        &:hover {
           a {
-            color: #830A48;
+            color: $accent;
+            border-bottom: 2px solid $accent;
             cursor: pointer;
           }
+          
           div {
-            background: #830A48;
+            background: $accent;
+            border-color: $black;
           }
         }
       }
     }
+    
     .contact {
       @media (max-width: $layout-breakpoint-medium) {
         flex: 1;
       }
+      
       a {
-        color: $black;
+        font-family: $font-body;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-caption;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $white;
         text-decoration: none;
-        border-bottom: 2px solid $black;
-        padding-bottom: 12px;
+        background-color: $black;
+        border: 2px solid $black;
+        padding: 8px 16px;
         white-space: nowrap;
+        box-shadow: $shadow-neobrutalist;
+        transition: all 0.2s ease;
+        
         @media (max-width: $layout-breakpoint-xsmall) {
-          border: none;
+          padding: 6px 12px;
+          font-size: 12px;
         }
       }
+      
       &:hover {
         a {
-          color: #830A48; // Change the color when .contact is hovered
-          cursor: pointer; // Change cursor to pointer on hover
+          background-color: $accent;
+          color: $white;
+          transform: translate(2px, 2px);
+          box-shadow: 2px 2px 0px $black;
+          cursor: pointer;
         }
       }
     }

@@ -1,73 +1,79 @@
-.about-head{
-.sectionHeadText {
-        top: 30%;
-        margin: 3rem;
-        font-weight: 600;
-        margin-left: 20rem;
-        color: rgb(0, 0, 0);
-        font-size: 60px;
-        
-        text-align: left;
-        position: absolute; 
-        margin: 3rem;
-        margin-left: 20rem;
-        line-height: 2.4rem;
-        color: #111;
-        top:100vh;
-        left:55%; 
-        width:30%;
-        @media (max-width: 1360px) {
-            margin: 1rem;
-            margin-left: 10rem;
-            font-size: 40px;
-            margin-left: 10rem;
-            position: static; 
-            width:80%;
-        }
-        @media (max-width: $layout-breakpoint-small) {
-            margin: 1rem;
-            margin-left: 5rem;
-            font-size: 40px;
-        }
-        @media (max-width: $layout-breakpoint-xsmall) {
-            margin: 1rem;
-            margin-left: 3rem;
-            font-size: 40px;
-        }
+.about-section {
+  border: 2px solid $black;
+  padding: 32px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: $background-alt;
+}
+
+.about-head {
+  position: relative;
+  z-index: 1;
+  
+  .sectionHeadText {
+    font-family: $font-heading;
+    font-weight: $font-weight-extrabold;
+    font-size: $font-size-h2;
+    color: $black;
+    text-align: left;
+    border-bottom: 2px solid $black;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    box-shadow: $shadow-neobrutalist;
+    background-color: $white;
+    padding: 24px;
+    border: 2px solid $black;
+    
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 28px;
+      padding: 16px;
     }
-    /* CSS for sectionSubText */
-    .sectionSubText {
-            text-align: left;
-            position: absolute; 
-            margin: 3rem;
-            font-weight: 600;
-            margin-left: 20rem;
-            line-height: 2.4rem;
-            color: #777777;
-            font-size: 14px;
-            letter-spacing: 1px;
-            top:115vh;
-            left:55%; 
-            width:30%;
-        @media (max-width: 1360px) {
-            margin: 1rem;
-            margin-left: 10rem;
-            position: static; 
-            width:80%;
-        }
-        @media (max-width: $layout-breakpoint-small) {
-            margin: 1rem;
-            margin-top: 5rem;
-            margin-left: 5rem;
-            position: static; 
-            width:80%;
-        }
-        @media (max-width: $layout-breakpoint-xsmall) {
-            margin: 1rem;
-            margin-top: 5rem;
-            margin-left: 3rem;
-            position: static; 
-            width:80%;
-        }
+    
+    @media (max-width: $layout-breakpoint-xsmall) {
+      font-size: 24px;
+      padding: 12px;
     }
+  }
+  
+  .sectionSubText {
+    font-family: $font-body;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-caption;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    background-color: $accent;
+    padding: 24px;
+    border: 2px solid $black;
+    box-shadow: $shadow-neobrutalist;
+    margin-bottom: 24px;
+    
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 16px;
+      font-size: 14px;
+    }
+    
+    @media (max-width: $layout-breakpoint-xsmall) {
+      padding: 12px;
+      font-size: 12px;
+    }
+  }
+  
+  // About image styling
+  .about-image {
+    border: 3px solid $black;
+    box-shadow: $shadow-neobrutalist;
+    max-width: 100%;
+    height: auto;
+    
+    // For desktop, position it asymmetrically
+    @media (min-width: $layout-breakpoint-medium) {
+      width: 45%;
+      margin-left: 32px;
+      margin-top: 24px;
+    }
+  }
 }

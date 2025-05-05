@@ -1,0 +1,69 @@
+// About container layout
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  
+  // On large screens, use a grid layout to position elements side by side
+  @media (min-width: $layout-breakpoint-medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: flex-start;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    
+    .transition-image.final {
+      grid-column: 1;
+      width: 100%;
+      margin: 0;
+      top: 0;
+      
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    
+    .about-head {
+      grid-column: 2;
+      position: relative;
+      
+      .sectionHeadText,
+      .sectionSubText {
+        position: static;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 24px;
+      }
+      
+      .sectionHeadText {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  
+  // On medium to small screens, stack elements vertically
+  @media (max-width: ($layout-breakpoint-medium - 1px)) {
+    padding: 0 16px;
+    
+    .transition-image.final {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    
+    .about-head {
+      width: 100%;
+      
+      .sectionHeadText,
+      .sectionSubText {
+        position: static;
+        width: 100%;
+        margin: 0 0 24px 0;
+      }
+    }
+  }
+}

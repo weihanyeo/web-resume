@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ThumbTack from './ThumbTack';
 
 const projects = [
     {
@@ -46,18 +47,21 @@ const Project = () => {
                 {projects.map((project, index) => (
                     <motion.div
                         whileInView={{ opacity: [0, 1] }}
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.8, type: 'tween' }}
-                        className='app-profile-item'
+                        className='app-profile-item post-it'
                         key={project.title + index}
                         onClick={() => openProjectInNewTab(project.imgNewTab)}
                         style={{ cursor: 'pointer' }}
                     >
+                        <div className="thumbtack-container">
+                            <ThumbTack color={index % 2 === 0 ? '#FF470F' : '#000000'} />
+                        </div>
                         <img src={project.imgUrl} alt={project.title} />
-                        <h2 className='bold-text' style={{ marginTop: 20 }}>
+                        <h2 className='bold-text'>
                             {project.title}
                         </h2>
-                        <p className='p-text' style={{ marginTop: 10 }}>
+                        <p className='p-text'>
                             {project.description}
                         </p>
                     </motion.div>

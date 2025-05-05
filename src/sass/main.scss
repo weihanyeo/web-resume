@@ -1,15 +1,19 @@
 @import "abstracts/variables";
-@import "base/global";
 @import "base/reset";
 @import "base/typography";
+@import "base/global";
+@import "base/grid";
 
 @import "components/header";
 @import "components/banner";
 @import "components/slidebar";
 @import "components/loader";
 @import "components/about";
+@import "components/about-container";
 @import "components/project";
 //@import "components/skills";
 @import "components/work";
 @import "components/contact";
-@import "components/footer"
+@import "components/footer";
+@import "components/cursor";
+@import "components/cursor-override"
