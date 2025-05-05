@@ -4,10 +4,37 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const experiences = [
   {
-    title: "Cyber Application Security Intern",
+    title: "Software Development Engineer in Test",
+    company_name: "Univers (Singapore)",
+    imgUrl: `${process.env.PUBLIC_URL}/images/company6.png`,
+    iconBg: "#eeeeee", 
+    date: "Jan 2025 - Present",
+    points: [
+      "Built and maintained automation test suites using Playwright and Chai, increasing test coverage by 30% across web and API layers",
+      "Seamlessly integrated these automated tests into Jenkins/Maven-based CI/CD pipelines to facilitate rapid feedback and continuous delivery",
+      "Collaborated on Next.js and JavaScript application development, contributing technical insights in a dynamic, cross-functional team environment",
+    ],
+    skills: ["Playwright", "Chai", "Jenkins", "Maven", "CI/CD", "Next.js", "JavaScript"]
+  },
+  {
+    title: "Software Automation Engineer",
+    company_name: "Razer Inc (Singapore)",
+    imgUrl: `${process.env.PUBLIC_URL}/images/company5.png`,
+    iconBg: "#000000", 
+    date: "May 2024 - Jan 2025",
+    points: [
+      "Partnered with local manual testers and global developers to proactively identify, troubleshoot, and resolve complex software issues",
+      "Designed and executed automation test cases using Robot Framework, Selenium, Python, and Jenkins, resulting in improved efficiency and reliability",
+      "Pioneered the use of virtual HID solutions to replace physical device dependencies, significantly streamlining testing processes",
+      "Developed custom setup scripts with NSIS and PowerShell to ensure secure DLL installations and registry configurations.",
+    ],
+    skills: ["Robot Framework", "Selenium", "Python", "Jenkins", "NSIS", "PowerShell", "DLL", "Registry"]
+  },
+  {
+    title: "Cyber Application Security",
     company_name: "Deloitte (Singapore)",
     imgUrl: `${process.env.PUBLIC_URL}/images/company4.png`,
-    iconBg: "#86BC25", // Deloitte green
+    iconBg: "#86BC25", 
     date: "May 2023 - Jul 2023",
     points: [
       "Drafted technical engagement proposal letters, effectively communicating, and presenting technical challenges and solutions to clients",
@@ -20,7 +47,7 @@ const experiences = [
     title: "IT Operations Engineer",
     company_name: "Kyndryl (Singapore)",
     imgUrl: `${process.env.PUBLIC_URL}/images/company3.png`,
-    iconBg: "#0F62FE", // Kyndryl blue
+    iconBg: "#0F62FE", 
     date: "May 2022 - Aug 2022",
     points: [
       "Specialized in providing technical support and maintenance. Deployed, cloned hardware change operations for healthcare technology solutions for thousands of devices for supporting end users.",
@@ -33,7 +60,7 @@ const experiences = [
     title: "IT Assistant",
     company_name: "Central Provident Fund Board (Singapore)",
     imgUrl: `${process.env.PUBLIC_URL}/images/company2.png`,
-    iconBg: "#1E5091", // CPF blue
+    iconBg: "#ffd966", 
     date: "Jun 2019 - Aug 2019",
     points: [
       "Collaborated cross-functionally to curate and integrate hundreds of new variables into the organization's data dictionary, strategically paved way for future policy implementations.",
@@ -46,7 +73,7 @@ const experiences = [
     title: "Software Engineer",
     company_name: "Ngee Ann Polytechnic (Singapore)",
     imgUrl: `${process.env.PUBLIC_URL}/images/company1.png`,
-    iconBg: "#C41E3A", // NP red
+    iconBg: "#3d85c6", 
     date: "Mar 2019 - May 2019",
     points: [
       "Team lead for the development of an autonomous concierge cum security robot in collaboration with Tan Tock Seng Hospital for my final year project.",
