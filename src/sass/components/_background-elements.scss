@@ -1,0 +1,56 @@
+// Background elements styling
+.section-container {
+  position: relative;
+  overflow: hidden;
+  
+  // Ensure the background decorations don't interfere with content
+  > *:not(svg) {
+    position: relative;
+    z-index: 1;
+  }
+  
+  // Section-specific background colors/patterns
+  &.banner-section {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &.about-section {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &.work-section-wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &.project-section-wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &.contact-section-wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+// Responsive adjustments for decorative elements
+@media (max-width: $layout-breakpoint-medium) {
+  .section-container {
+    // Scale down decorative elements on smaller screens
+    svg {
+      transform-origin: center;
+      transform: scale(0.8) rotate(var(--rotation, 0deg));
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .section-container {
+    // Further scale down and reduce quantity on mobile
+    svg {
+      transform: scale(0.6) rotate(var(--rotation, 0deg));
+      
+      &:nth-child(odd) {
+        display: none; // Hide some elements on very small screens
+      }
+    }
+  }
+}
