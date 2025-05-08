@@ -65,14 +65,11 @@
                 color: $black;
                 font-family: $font-body;
                 font-weight: $font-weight-medium;
-                font-size: $font-size-h3;
+                font-size: $font-size-h2;
                 cursor: pointer;
                 position: relative;
                 @media (max-width: $layout-breakpoint-small) {
-                    font-size: 48px;
-                }
-                @media (max-width: $layout-breakpoint-xsmall) {
-                    font-size: 30px;
+                    font-size: $font-size-h2;
                 }
             }
         }

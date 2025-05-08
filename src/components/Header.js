@@ -1,20 +1,13 @@
 import { motion } from "framer-motion";
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const handleScrollTo = (id) => {
-    // Find the section with the matching ID
     const targetElement = document.getElementById(id);
 
     if (targetElement) {
-      // Get the element's position relative to the viewport
-      const rect = targetElement.getBoundingClientRect();
-      // Get the current scroll position
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      // Calculate the absolute position
-      const absoluteTop = scrollTop + rect.top;
-      
       window.scrollTo({
-        top: absoluteTop - 70, // Adjust the offset as needed
+        top: targetElement.offsetTop - 70, // Adjust the offset as needed
         behavior: "smooth",
       });
     }
@@ -47,15 +40,17 @@ const Header = () => {
           {['Home', 'Work', 'Project'].map((item) => (
             <li className='app__flex' key={`${item}`}>
               <div />
-              <a
-                href={`#${item}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScrollTo(item);
-                }}
-              >
+              <Link
+                              activeClass="active"
+                              to={item} // Assuming your sections have ids matching their names
+                              spy={true}
+                              smooth={true}
+                              offset={-70} // Adjust this value to offset the scroll position if you have a fixed header
+                              duration={500} // Scroll duration in milliseconds
+                              ease="cubic-bezier(0.645, 0.045, 0.355, 1)" // Example of a custom ease function
+                            >
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

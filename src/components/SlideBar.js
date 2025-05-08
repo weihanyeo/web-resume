@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'; 
 import { menuSlide, scale, slide } from './Animate';
+import { Link } from 'react-scroll';
 
 const SlideBar = () => {
   const [windowInnerHeight, setWindowInnerHeight] = useState(() => {
@@ -14,11 +15,8 @@ const SlideBar = () => {
     const targetElement = document.getElementById(id);
 
     if (targetElement) {
-      const rect = targetElement.getBoundingClientRect();
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const absoluteTop = scrollTop + rect.top;
       window.scrollTo({
-        top: absoluteTop - 50,
+        top: targetElement.offsetTop - 70, // Adjust the offset as needed
         behavior: "smooth",
       });
     }
@@ -92,13 +90,17 @@ const SlideBar = () => {
                 className="indicator" // Replace with your desired class name or use inline styles
               ></motion.div>
 
-              <a href={`#${item}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleScrollTo(item);
-              }}>
+              <Link
+                              activeClass="active"
+                              to={item} // Assuming your sections have ids matching their names
+                              spy={true}
+                              smooth={true}
+                              offset={-70} // Adjust this value to offset the scroll position if you have a fixed header
+                              duration={500} // Scroll duration in milliseconds
+                              ease="cubic-bezier(0.645, 0.045, 0.355, 1)" // Example of a custom ease function
+                            >
                 {item}
-              </a>
+              </Link>
               
             </motion.div>
           ))}
