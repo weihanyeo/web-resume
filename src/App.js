@@ -84,7 +84,7 @@ function App() {
               </div>
             </div>
             <div className="section-container work-section-wrapper">
-              <BackgroundDecorations section="work" />
+              <BackgroundDecorations/>
               <Work/>
             </div>
             

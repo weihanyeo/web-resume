@@ -2,11 +2,19 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const handleScrollTo = (id) => {
+    // Find the section with the matching ID
     const targetElement = document.getElementById(id);
 
     if (targetElement) {
+      // Get the element's position relative to the viewport
+      const rect = targetElement.getBoundingClientRect();
+      // Get the current scroll position
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      // Calculate the absolute position
+      const absoluteTop = scrollTop + rect.top;
+      
       window.scrollTo({
-        top: targetElement.offsetTop - 70, // Adjust the offset as needed
+        top: absoluteTop - 70, // Adjust the offset as needed
         behavior: "smooth",
       });
     }

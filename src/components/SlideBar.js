@@ -14,8 +14,11 @@ const SlideBar = () => {
     const targetElement = document.getElementById(id);
 
     if (targetElement) {
+      const rect = targetElement.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const absoluteTop = scrollTop + rect.top;
       window.scrollTo({
-        top: targetElement.offsetTop - 70, // Adjust the offset as needed
+        top: absoluteTop - 50,
         behavior: "smooth",
       });
     }

@@ -11,7 +11,7 @@
     width: 300px;
     
     @media (max-width: $layout-breakpoint-xsmall) {
-        width: 100%;
+        width: 80%;
     }
     @media (min-width: $layout-breakpoint-medium) {
         display: none;
@@ -72,7 +72,7 @@
                     font-size: 48px;
                 }
                 @media (max-width: $layout-breakpoint-xsmall) {
-                    font-size: 40px;
+                    font-size: 30px;
                 }
             }
         }
