@@ -55,7 +55,7 @@ const Footer = () => {
             <a href="https://www.figma.com/@yeoweihan" target="_blank" className="social-button">
               <i className="fa-brands fa-figma"></i>
             </a>
-            <a href="https://www.linkedin.com/in/yeo-wei-han/" target="_blank" className="social-button">
+            <a href="https://www.linkedin.com/in/weihanyeo/" target="_blank" className="social-button">
               <i className="fa-brands fa-linkedin"></i>
             </a>
             <a href="mailto:yeoweihan@u.nus.edu" className="social-button">
